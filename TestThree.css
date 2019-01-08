@@ -1,0 +1,38 @@
+html,body,*
+{
+	margin: 0;
+    font-size: 62.5%;
+    background-color: rgb(104,205,213);
+}
+.headSrc
+{
+	margin-top: 2%;
+	margin-left: 2%;
+	width: 2.5em;
+	height: 2.5em;
+}
+.logo
+{
+	text-align: center;
+}
+.logo img
+{
+	width: 3em;
+	height: 3em;
+}
+
+.logo .logoFont
+{
+	color: white;
+	font-size:5em;
+	margin-left: 2em;
+	font-weight:550;
+	letter-spacing:0.1em;
+}
+.logo .logoSFont
+{
+	color: white;
+	font-size:xx-small;
+	font-weight:100;
+	margin-left: 2.2em;
+}
