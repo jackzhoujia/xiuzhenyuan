@@ -3,36 +3,62 @@ html,body,*
 	margin: 0;
     font-size: 62.5%;
     background-color: rgb(104,205,213);
+
 }
-.headSrc
+.head img
 {
 	margin-top: 2%;
 	margin-left: 2%;
-	width: 2.5em;
-	height: 2.5em;
+	width: 2.5rem;
+	height: 2.5rem;
 }
-.logo
+.body
 {
+	margin-top: 10%;
 	text-align: center;
 }
-.logo img
+.body img
 {
-	width: 3em;
-	height: 3em;
+	width: 7rem;
+	height: 3rem;
 }
-
-.logo .logoFont
+.text
+{
+	margin-top: 15%;
+	width: 75%;
+	margin-left:12.5% ;
+	margin-right: 12.5%;
+}
+.text p
 {
 	color: white;
-	font-size:5em;
-	margin-left: 2em;
-	font-weight:550;
-	letter-spacing:0.1em;
+	line-height:1.5rem;
 }
-.logo .logoSFont
+/*.foot
 {
-	color: white;
-	font-size:xx-small;
-	font-weight:100;
-	margin-left: 2.2em;
+	margin-top: 20%;
+}*/
+.footLeft
+{
+	margin-top: 20%;
+	float: left;
+}
+.footRight
+{
+	margin-top: 20%;
+	float: right;
+}
+.imgRight,.imgLeft
+{
+	width: 6rem;
+	height: 5rem;
+}
+.imgLeft
+{
+	margin-left: 25%;
+}
+.imgRight
+{
+	float: right;
+	margin-right: 25%;
 }
