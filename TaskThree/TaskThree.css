@@ -5,53 +5,40 @@ html,body,*
     background-color: rgb(104,205,213);
 
 }
-.head img
+.imgOne
 {
 	margin-top: 2%;
 	margin-left: 2%;
 	width: 2.5rem;
 	height: 2.5rem;
 }
-.body
+.imgTwo
 {
-	margin-top: 10%;
-	text-align: center;
-}
-.body img
-{
+	display: block;
+	margin: 10% auto;
 	width: 7rem;
 	height: 3rem;
 }
 .text
 {
-	margin-top: 15%;
 	width: 75%;
-	margin-left:12.5% ;
-	margin-right: 12.5%;
+	margin: 15% auto;
 }
 .text p
 {
 	color: white;
 	line-height:1.5rem;
 }
-.footLeft
-{
-	margin-top: 20%;
-	float: left;
-}
-.footRight
-{
-	margin-top: 20%;
-	float: right;
-}
 .imgLeft
 {
-	margin-left: 50%;
+	margin-top: 20%;
+	margin-left: 10%;
 }
 .imgRight
 {
 	float: right;
-	margin-right: 50%;
+	margin-top: 20%;
+	margin-right: 10%;
 }
 .imgRight,.imgLeft
 {

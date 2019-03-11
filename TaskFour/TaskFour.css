@@ -46,6 +46,8 @@ header
 }
 .TestImg
 {
+    width: 2.5rem;
+    height: 2.5rem;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -53,20 +55,12 @@ header
     padding-right: 1.5rem;
     border-right:0.1rem solid rgb(234,237,238);
 }
-.TestImg img
-{
-    width: 2.5rem;
-    height: 2.5rem;
-}
 .text
 {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
     margin-left: 6rem;
-}
-.text input
-{
     height: 2rem;
     font-size: 1.5rem;
     border:none;
@@ -80,6 +74,8 @@ header
 }
 .PwImg
 {
+    width: 2.5rem;
+    height: 2.5rem;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -87,23 +83,15 @@ header
     padding-right: 1.5rem;
     border-right:0.1rem solid rgb(234,237,238);
 }
-.PwImg img
-{
-    width: 2.5rem;
-    height: 2.5rem;
-}
 .password
-{
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    margin-left: 6rem;
-}
-.password input
 {
     height: 2rem;
     font-size: 1.5rem;
     border:none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 6rem;
 }
 footer
 {
@@ -122,7 +110,6 @@ footer
 }
 a
 {
-    display: block;
     float: right;
     margin-right: 1rem;
     margin-top: 1rem;
