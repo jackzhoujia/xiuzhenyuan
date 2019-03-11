@@ -1,0 +1,131 @@
+html,body
+{
+    margin: 0;
+    font-size: 62.5%;
+    background-color: rgb(239,240,244);
+}
+.head
+{
+    height: 4rem;
+    background-color: rgb(95,192,205);
+    position: relative;
+}
+.TextLeft
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 5%;
+    font-size: 1.5rem;
+    color: white;
+}
+.TextCenter
+{
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+    font-weight:600;
+    line-height: 4rem;
+    letter-spacing:0.3rem;
+}
+.TextRight
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 5%;
+    font-size: 1.5rem;
+    color: white;
+}
+.bodyOne
+{
+    margin-top: 1rem;
+    height: 4.5rem;
+    background-color: white;
+    position: relative;
+}
+.TestImg
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 1rem;
+    padding-right: 1.5rem;
+    border-right:0.1rem solid rgb(234,237,238);
+}
+.TestImg img
+{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.text
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 6rem;
+}
+.text input
+{
+    height: 2rem;
+    font-size: 1.5rem;
+    border:none;
+}
+.bodyTwo
+{
+    margin-top: 1rem;
+    height: 4.5rem;
+    background-color: white;
+    position: relative;
+}
+.PwImg
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 1rem;
+    padding-right: 1.5rem;
+    border-right:0.1rem solid rgb(234,237,238);
+}
+.PwImg img
+{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.password
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 6rem;
+}
+.password input
+{
+    height: 2rem;
+    font-size: 1.5rem;
+    border:none;
+}
+.footButton
+{
+    margin-top: 1rem;
+    height: 5.5rem;
+    background-color: rgb(95,192,205);
+}
+.footText
+{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    font-weight:200;
+    line-height: 5.5rem;
+    letter-spacing:1rem;
+}
+a
+{
+     display: block;
+     float: right;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: gray;
+}
+
