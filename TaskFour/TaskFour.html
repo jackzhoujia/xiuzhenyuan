@@ -11,23 +11,20 @@
     <div class="TextCenter">登录</div>
     <div class="TextRight">关闭</div>
 </header>
-
 <main>
     <div class="bodyOne">
         <img class="TestImg" src="TaskFourSrc\fromText.png">
-        <input class="text" type="text" placeholder="请输入手机号">
+        <input class="text" type="text" placeholder="请输入手机号" maxlength="11" oninput="value=value.replace(/[^\d]/g,'')">
     </div>
     <div class="bodyTwo">
         <img class="PwImg" src="TaskFourSrc\fromPW.png">
         <input class="password" type="password" placeholder="请输入密码">
     </div>
 </main>
-
 <footer>
     <div class="footText">登录</div>
     <a href="www.baidu.com" class="a">忘记密码</a>
 </footer>
-
-
 </body>
 </html>
+
