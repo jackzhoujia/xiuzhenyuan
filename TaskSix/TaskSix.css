@@ -12,7 +12,7 @@ header{
     width: 100%;
 }
 .headerOne{
-    height: 4rem;
+    height: 4.4rem;
     background-color: rgb(95,192,205);
     display: flex;
     justify-content:space-between;
@@ -27,36 +27,64 @@ header{
     margin-right: 1.5rem;
 }
 .headerOneLeft{
-    width: 2rem;
-    height: 2rem;
-    margin-left: 1rem;
+    width: 2.1rem;
+    height: 2.2rem;
+    margin-left: 1.5rem;
 }
+.centerTest{
+    display: flex;
+    height: 3.5rem;
+    width: 14.3rem;
+    background-color: #55A8B3;
+    border-radius:0.3rem;
+}
+.centerTestOne{
+    font-size: 1.7rem;
+    color: white;
+    flex: auto;
+    text-align: center;
+    line-height: 3.5rem;
+}
+.centerTestTwo{
+    font-size: 1.7rem;
+    color: #5FC0CD;
+    background-color: white;
+    flex: auto;
+    text-align: center;
+    line-height: 3.5rem;
+    border-radius:0.3rem;
+}
+
 .headerTwo{
-    height: 3rem;
+    height: 4rem;
     display: flex;
     align-items:center;
-    border-bottom: 0.1rem solid rgb(95,192,205);
+    border-bottom: 0.1rem solid #E1E5E7;
     background-color: white;
 }
 .headerTwoTestOne,.headerTwoTestTwo{
-    height: 2.5rem;
-    border-right: 0.1rem solid rgb(95,192,205);
+    height: 4rem;
+    border-right: 0.1rem solid #E1E5E7;
     flex:auto;
     display: flex;
     align-items:center;
+    position: relative;
 }
 .headerTwoTestThree{
-    height: 2.5rem;
+    height: 4rem;
     border-right: 0.1rem solid white;
     flex:auto;
     display: flex;
     align-items:center;
- }
+    position: relative;
+}
 .headerTwoTestOne span,.headerTwoTestTwo span,.headerTwoTestThree span
 {
     margin: auto;
     text-align: center;
-    width: 5rem;
+    width: 7rem;
+    font-size: 1.4rem;
+    color: #999999;
 }
 .headerTwoSrc
 {
@@ -68,14 +96,36 @@ header{
     background-position: -1rem -9.3rem;
 }
 .dropdown-content {
-    display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 1rem 1.5rem 0px rgba(0,0,0,0.2);
-    padding: 1rem 1rem;
+    top: 4rem;
+    left: 0;
+    display: none;
+    width: 100%;
+    background-color: #f1f1f1;
 }
-.dropdown:hover .dropdown-content {
+.headerTwoTestOne:hover .dropdown-content{
     display: block;
+}
+.headerTwoTestTwo:hover .dropdown-content{
+    display: block;
+}
+.headerTwoTestThree:hover .dropdown-content{
+    display: block;
+}
+.dropdown-content p{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.dropdown-content p:hover{
+    background-color: #555;
+    color: white;
+}
+main {
+    width: 100%;
+    margin: 8.4rem 0 5.1rem 0;
+    overflow-y: auto;
 }
 ul{
     padding: 0;
@@ -84,32 +134,58 @@ ul{
 li{
     border-bottom:0.1rem solid rgb(225,229,231);
     list-style-type:none;
-    padding: 2rem 0 2rem 0;
+    padding: 1rem 0 1rem 0;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
-span{
+li span{
     font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
 }
-.mainOne img,.mainTwo img,.mainThree img{
+.mainOneSrc{
     width: 1.2rem;
     height: 1.2rem;
-    margin: 0 0.5rem 0 0.5rem;
+    display: inline-block;
+    background-image: url("TaskSixPrc/css_sprites (1).png");
+    background-repeat: no-repeat;
+    background-position: -9.4rem -1rem;
+    margin: 0 1.5rem 0 1.5rem;
+}
+.mainThreeSrc{
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-block;
+    background-image: url("TaskSixPrc/css_sprites (1).png");
+    background-repeat: no-repeat;
+    background-position: -9.4rem -4.2rem;
+    margin: 0 1.5rem 0 1.5rem;
 }
 .mainLeftTest{
-    margin-left: 2.2rem;
+    margin-left: 4.2rem;
+}
+.mainRightTest{
+    color: red;
 }
 .mainOne,.mainTwo{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 .mainTwo{
     display: flex;
     justify-content:space-between;
+    margin-right: 1rem;
 }
-main {
-    width: 100%;
-    margin: 7rem 0 6rem 0;
-    overflow-y: auto;
+.mainTwo div{
+    display: flex;
+}
+.mainRightSrc{
+    width: 1rem;
+    height: 1rem;
+    border-top: 2px solid #5FC0CD;
+    border-right: 2px solid #5FC0CD;
+    transform: rotate(45deg);
 }
 footer{
     position: fixed;
@@ -118,28 +194,63 @@ footer{
     width: 100%;
     display: flex;
     justify-content:space-between;
-    height: 6rem;
-    background-color: aqua;
+    height: 5rem;
+    background-color: rgba(248,250,251,1);
     align-items:center;
 }
-footer img{
-    width: 4rem;
-    height: 4rem;
-}
-.footerOne img,.footerTwo img{
-    width: 2rem;
-    height: 2rem;
-}
-.footerTwo,.footerOne{
+.footerOne{
+    margin-left: 7rem;
     display: flex;
     flex-direction: column;
 }
-.footerOne{
-    margin-left: 4rem;
+.footerLeftSrc{
+    width: 2.3rem;
+    height: 2.3rem;
+    background-image: url("TaskSixPrc/css_sprites (1).png");
+    background-repeat: no-repeat;
+    background-position: -5.1rem -1rem;
+    margin-bottom: 0.3rem;
+}
+.footerOne span{
+    font-size: 1rem;
+    color: #5FC0CD;
+    width: 2.3rem;
+    text-align: center;
+}
+.footerThree{
+    margin-right: 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.footerRightSrc{
+    width: 2.1rem;
+    height: 2.1rem;
+    background-image: url("TaskSixPrc/css_sprites (1).png");
+    background-repeat: no-repeat;
+    background-position: -1rem -5.2rem;
+    margin-bottom: 0.3rem;
+}
+.footerThree span{
+    font-size: 1rem;
+    color: #999999;
+    width: 2.1rem;
+    text-align: center;
 }
 .footerTwo{
-    margin-right: 4rem;
+    width: 4.7rem;
+    height: 4.7rem;
+    background-color: rgba(95,192,205,1);
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: flex;
+
 }
-.footerTwo img,.footerOne img{
-    margin-bottom: 0.6rem;
+.footerCenterSrc{
+    margin: auto;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("TaskSixPrc/css_sprites (1).png");
+    background-repeat: no-repeat;
+    background-position: -5.1rem -5.2rem;
 }
