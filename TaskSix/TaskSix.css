@@ -2,77 +2,75 @@ html,body
 {
     margin: 0;
 }
-html{
-    font-size: 62.5%;
-}
 header{
     position: fixed;
     top: 0;
     z-index:1;
     width: 100%;
 }
-.headerOne{
-    height: 4.4rem;
-    background-color: rgb(95,192,205);
+.header-one{
     display: flex;
     justify-content:space-between;
     align-items:center;
+    height: 44px;
+    background-color: rgb(95,192,205);
 }
-.headerOne span{
-    width: 2.1rem;
-    height: 2.2rem;
-    background-image: url("TaskSixPrc/css_sprites (1).png");
-    background-repeat: no-repeat;
-    background-position: -1rem -1rem;
-    margin-right: 1.5rem;
+.header-one span{
+    width: 21px;
+    height: 22px;
+    background: url("TaskSixPrc/css_sprites.png")-10px -10px;
+    margin-right: 15px;
 }
-.headerOneLeft{
-    width: 2.1rem;
-    height: 2.2rem;
-    margin-left: 1.5rem;
+.header-one-left{
+    width: 21px;
+    height: 22px;
+    margin-left: 15px;
 }
-.centerTest{
+.center-test{
     display: flex;
-    height: 3.5rem;
-    width: 14.3rem;
+    height: 35px;
+    width: 143px;
     background-color: #55A8B3;
-    border-radius:0.3rem;
+    border-radius:3px;
 }
-.centerTestOne{
-    font-size: 1.7rem;
+.center-test-one{
+    font-size: 17px;
     color: white;
     flex: auto;
     text-align: center;
-    line-height: 3.5rem;
+    line-height: 35px;
 }
-.centerTestTwo{
-    font-size: 1.7rem;
+.center-test-two{
+    font-size: 17px;
     color: #5FC0CD;
     background-color: white;
     flex: auto;
     text-align: center;
-    line-height: 3.5rem;
-    border-radius:0.3rem;
+    line-height: 35px;
+    border-radius:3px;
 }
-
+header ul{
+    padding: 0;
+    margin: 0;
+}
 .headerTwo{
-    height: 4rem;
+    height: 40px;
     display: flex;
     align-items:center;
-    border-bottom: 0.1rem solid #E1E5E7;
+    border-bottom: 1px solid #E1E5E7;
     background-color: white;
 }
 .headerTwoTestOne,.headerTwoTestTwo{
-    height: 4rem;
-    border-right: 0.1rem solid #E1E5E7;
+    height: 40px;
+    border-right: 1px solid #E1E5E7;
     flex:auto;
     display: flex;
     align-items:center;
     position: relative;
 }
 .headerTwoTestThree{
-    height: 4rem;
-    border-right: 0.1rem solid white;
+    height: 40px;
+    border-right: 1px solid white;
     flex:auto;
     display: flex;
     align-items:center;
@@ -82,22 +80,20 @@ header{
 {
     margin: auto;
     text-align: center;
-    width: 7rem;
-    font-size: 1.4rem;
+    width: 70px;
+    font-size: 14px;
     color: #999999;
 }
 .headerTwoSrc
 {
-    padding-right: 1rem;
-    width: 0.7rem;
-    height: 0.4rem;
-    background-image: url("TaskSixPrc/css_sprites (1).png");
-    background-repeat: no-repeat;
-    background-position: -1rem -9.3rem;
+    padding-right: 10px;
+    width: 7px;
+    height: 4px;
+    background: url("TaskSixPrc/css_sprites.png")-10px -93px;
 }
 .dropdown-content {
     position: absolute;
-    top: 4rem;
+    top: 40px;
     left: 0;
     display: none;
     width: 100%;
@@ -113,7 +109,7 @@ header{
     display: block;
 }
 .dropdown-content p{
-    font-size: 1.5rem;
+    font-size: 15px;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -124,65 +120,62 @@ header{
 }
 main {
     width: 100%;
-    margin: 8.4rem 0 5.1rem 0;
+    margin: 84px 0 0 0;
+    height: 78vh;
     overflow-y: auto;
 }
-ul{
+main ul{
     padding: 0;
     margin: 0;
 }
-li{
-    border-bottom:0.1rem solid rgb(225,229,231);
+main li{
+    border-bottom:1px solid rgb(225,229,231);
     list-style-type:none;
-    padding: 1rem 0 1rem 0;
+    padding: 10px 0 10px 0;
     display: flex;
     flex-direction: column;
     position: relative;
 }
-li span{
-    font-size: 1.2rem;
+main li span{
+    font-size: 12px;
     overflow: hidden;
     text-overflow:ellipsis;
     white-space: nowrap;
 }
 .mainOneSrc{
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 12px;
+    height: 12px;
     display: inline-block;
-    background-image: url("TaskSixPrc/css_sprites (1).png");
-    background-repeat: no-repeat;
-    background-position: -9.4rem -1rem;
-    margin: 0 1.5rem 0 1.5rem;
+    background: url("TaskSixPrc/css_sprites.png")-94px -10px;
+    margin: 0 15px 0 15px;
 }
 .mainThreeSrc{
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 12px;
+    height: 12px;
     display: inline-block;
-    background-image: url("TaskSixPrc/css_sprites (1).png");
-    background-repeat: no-repeat;
-    background-position: -9.4rem -4.2rem;
-    margin: 0 1.5rem 0 1.5rem;
+    background: url("TaskSixPrc/css_sprites.png")-94px -42px;
+    margin: 0 15px 0 15px;
 }
 .mainLeftTest{
-    margin-left: 4.2rem;
+    margin-left: 42px;
 }
 .mainRightTest{
     color: red;
 }
 .mainOne,.mainTwo{
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
 .mainTwo{
     display: flex;
     justify-content:space-between;
-    margin-right: 1rem;
+    margin-right: 10px;
 }
 .mainTwo div{
     display: flex;
 }
 .mainRightSrc{
-    width: 1rem;
-    height: 1rem;
+    width: 10px;
+    height: 10px;
     border-top: 2px solid #5FC0CD;
     border-right: 2px solid #5FC0CD;
     transform: rotate(45deg);
@@ -194,51 +187,47 @@ footer{
     width: 100%;
     display: flex;
     justify-content:space-between;
-    height: 5rem;
+    height: 50px;
     background-color: rgba(248,250,251,1);
     align-items:center;
 }
 .footerOne{
-    margin-left: 7rem;
+    margin-left: 70px;
     display: flex;
     flex-direction: column;
 }
 .footerLeftSrc{
-    width: 2.3rem;
-    height: 2.3rem;
-    background-image: url("TaskSixPrc/css_sprites (1).png");
-    background-repeat: no-repeat;
-    background-position: -5.1rem -1rem;
-    margin-bottom: 0.3rem;
+    width: 23px;
+    height: 20px;
+    background: url("TaskSixPrc/css_sprites.png")-51px -10px;
+    margin-bottom: 3px;
 }
 .footerOne span{
-    font-size: 1rem;
+    font-size: 10px;
     color: #5FC0CD;
-    width: 2.3rem;
+    width: 23px;
     text-align: center;
 }
 .footerThree{
-    margin-right: 7rem;
+    margin-right: 70px;
     display: flex;
     flex-direction: column;
 }
 .footerRightSrc{
-    width: 2.1rem;
-    height: 2.1rem;
-    background-image: url("TaskSixPrc/css_sprites (1).png");
-    background-repeat: no-repeat;
-    background-position: -1rem -5.2rem;
-    margin-bottom: 0.3rem;
+    width: 21px;
+    height: 21px;
+    background: url("TaskSixPrc/css_sprites.png")-10px -52px;
+    margin-bottom: 3px;
 }
 .footerThree span{
-    font-size: 1rem;
+    font-size: 10px;
     color: #999999;
-    width: 2.1rem;
+    width: 21px;
     text-align: center;
 }
 .footerTwo{
-    width: 4.7rem;
-    height: 4.7rem;
+    width: 47px;
+    height: 47px;
     background-color: rgba(95,192,205,1);
     border-radius: 50%;
     -moz-border-radius: 50%;
@@ -248,9 +237,7 @@ footer{
 }
 .footerCenterSrc{
     margin: auto;
-    width: 2rem;
-    height: 2rem;
-    background-image: url("TaskSixPrc/css_sprites (1).png");
-    background-repeat: no-repeat;
-    background-position: -5.1rem -5.2rem;
+    width: 20px;
+    height: 20px;
+    background: url("TaskSixPrc/css_sprites.png")-51px -52px;
 }

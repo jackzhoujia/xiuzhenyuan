@@ -1,14 +1,13 @@
 body
 {
     margin: 0;
-    font-size: 62.5%;
 }
-.one
+div
 {
-    background-color:rgb(255,166,0);
-    width: 30%;
+    float: left;
+    padding-left: 30%;
     padding-top: 30%;
     margin: 2.5% 0 0 2.5%;
-    border-radius:1rem;
-    float: left;
+    background-color:rgb(255,166,0);
+    border-radius:5px;
 }

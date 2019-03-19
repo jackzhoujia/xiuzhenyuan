@@ -1,14 +1,16 @@
-html,body,*
+html
 {
-	margin: 0;
     font-size: 62.5%;
     background-color: rgb(104,205,213);
 
 }
+body{
+	margin: 0;
+}
+
 .imgOne
 {
-	margin-top: 2%;
-	margin-left: 2%;
+	margin: 10px 0 0 10px;
 	width: 2.5rem;
 	height: 2.5rem;
 }
@@ -21,24 +23,19 @@ html,body,*
 }
 .text
 {
+	margin: auto;
 	width: 75%;
-	margin: 15% auto;
-}
-.text p
-{
-	color: white;
 	line-height:1.5rem;
+	color: white;
 }
 .imgLeft
 {
-	margin-top: 20%;
-	margin-left: 10%;
+	margin: 30px 0 0 30px;
 }
 .imgRight
 {
 	float: right;
-	margin-top: 20%;
-	margin-right: 10%;
+	margin: 30px 30px 0 0;
 }
 .imgRight,.imgLeft
 {

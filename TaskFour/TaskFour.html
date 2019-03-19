@@ -7,22 +7,24 @@
 </head>
 <body>
 <header>
-    <div class="TextLeft">注册</div>
-    <div class="TextCenter">登录</div>
-    <div class="TextRight">关闭</div>
+    <span>注册</span>
+    <div class="header-center-text">登录</div>
+    <span>关闭</span>
 </header>
 <main>
-    <div class="bodyOne">
-        <img class="TestImg" src="TaskFourSrc\fromText.png">
-        <input class="text" type="text" placeholder="请输入手机号" maxlength="11" oninput="value=value.replace(/[^\d]/g,'')">
-    </div>
-    <div class="bodyTwo">
-        <img class="PwImg" src="TaskFourSrc\fromPW.png">
-        <input class="password" type="password" placeholder="请输入密码">
-    </div>
+    <ul>
+        <li>
+            <img src="TaskFourSrc\iphone.png">
+            <input type="text" placeholder="请输入手机号" maxlength="11" oninput="value=value.replace(/[^\d]/g,'')">
+        </li>
+        <li>
+            <img src="TaskFourSrc\locked 2.png">
+            <input type="password" placeholder="请输入密码">
+        </li>
+    </ul>
 </main>
 <footer>
-    <div class="footText">登录</div>
+    <button>登录</button>
     <a href="www.baidu.com" class="a">忘记密码</a>
 </footer>
 </body>
