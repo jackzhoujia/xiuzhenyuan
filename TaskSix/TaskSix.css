@@ -193,8 +193,10 @@ footer{
 }
 .footerOne{
     margin-left: 70px;
+    width: 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .footerLeftSrc{
     width: 23px;
@@ -202,16 +204,17 @@ footer{
     background: url("TaskSixPrc/css_sprites.png")-51px -10px;
     margin-bottom: 3px;
 }
-.footerOne span{
+.footerOne div{
     font-size: 10px;
     color: #5FC0CD;
-    width: 23px;
+    width: 50px;
     text-align: center;
 }
 .footerThree{
     margin-right: 70px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .footerRightSrc{
     width: 21px;
@@ -219,10 +222,10 @@ footer{
     background: url("TaskSixPrc/css_sprites.png")-10px -52px;
     margin-bottom: 3px;
 }
-.footerThree span{
+.footerThree div{
     font-size: 10px;
     color: #999999;
-    width: 21px;
+    width: 50px;
     text-align: center;
 }
 .footerTwo{

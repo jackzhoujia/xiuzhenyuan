@@ -1,0 +1,39 @@
+html,body
+{
+    margin: 0;
+}
+
+.header-left-test{
+    float: right;
+    font-size: 7px;
+    color: #29B078;
+}
+header ul{
+    display: flex;
+    justify-content:flex-end;
+    padding: 0 20% 0 0;
+    margin: 0;
+    height: 70px;
+    background-color: #29B078;
+}
+header li{
+    display: flex;
+    list-style-type:none;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    line-height: 70px;
+    padding: 0 20px 0 20px;
+    font-size: 19px;
+}
+li a:hover{
+    text-decoration: none;
+    color: white;
+     border-bottom: 4px solid white;
+}
+
+/*
+a:link{
+    color: white;
+}*/
