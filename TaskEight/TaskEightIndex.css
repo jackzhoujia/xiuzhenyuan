@@ -2,38 +2,242 @@ html,body
 {
     margin: 0;
 }
-
+.header-one{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .header-left-test{
-    float: right;
+    margin-left: 15vw;
     font-size: 7px;
     color: #29B078;
 }
-header ul{
+.header-one-right-img{
+    margin-right: 15vw;
+}
+.header-nav{
     display: flex;
     justify-content:flex-end;
-    padding: 0 20% 0 0;
+    padding: 0 13vw 0 0;
     margin: 0;
-    height: 70px;
+    height: 140px;
     background-color: #29B078;
 }
-header li{
+.header-nav li{
     display: flex;
     list-style-type:none;
 }
-li a{
+.header-nav a{
     text-decoration: none;
     color: white;
-    line-height: 70px;
-    padding: 0 20px 0 20px;
-    font-size: 19px;
+    line-height: 140px;
+    padding: 0 40px 0 40px;
+    font-size:30px;
 }
-li a:hover{
+.header-nav a:hover{
     text-decoration: none;
     color: white;
      border-bottom: 4px solid white;
 }
+.pos-f-t{
+    display: none;
+}
+.pos-f-t ul{
+    margin: 0;
+    padding: 0;
+    background-color:#29B078
+}
+.pos-f-t ul li{
+    list-style-type:none;
+    text-align: center;
+}
+.pos-f-t a{
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    color: #fff;
+}
+.pos-f-t a:hover{
+    text-decoration: none;
+}
+.pos-f-t ul li:hover{
+    background-color: #f1f1f1;
+}
+main{
+    background-color: rgb(250,250,250);
+}
+.main-one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-one-top-img-one,.main-one-top-img-two,.main-one-top-img-three{
+    width: 70px;
+    height: 60px;
+}
+.main-one-top-img-one{
+    background: url("TaskEightInexSrc/rocket.png")no-repeat center center;
 
-/*
-a:link{
+}
+.main-one-top-img-two{
+    background: url("TaskEightInexSrc/archive.png")no-repeat center center;
+
+}
+.main-one-top-img-three{
+    background: url("TaskEightInexSrc/Shape 253.png")no-repeat center center;
+
+}
+.main-one-center-text{
+    margin: 20px 0;
+    font-size: 9px;
+    font-weight:bold;
+}
+.main-one-bottom-text{
+    font-size:8px;
+    color:rgba(153,153,153,1);
+    padding-bottom: 50px;
+}
+.main-one-right-text{
+    margin: 20px 0;
+    font-size:8px;
+    color:rgba(153,153,153,1);
+}
+.title-one{
+    text-align: center;
+    margin: 60px 0;
+    font-size:9px;
+    font-family:MicrosoftYaHei;
+    font-weight:bold;
+}
+.main-two-square{
+    width:74px;
+    height: 74px;
+    text-align: center;
+    line-height: 76px;
+    font-size: 9px;
+    color: #29B078;
+    background: url("TaskEightInexSrc/椭圆 8 拷贝.png") no-repeat ;
+}
+.main-two{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+}
+.main-two-center-text{
+    width: 50%;
+}
+.title-two{
+    text-align: center;
+    margin: 60px 0;
+    font-size:9px;
+    font-weight:bold;
+}
+.card{
+    align-items: center;
+}
+.card-title{
+    margin: 30px 0;
+    font-size:9px;
+    font-weight:bold;
+    text-align: center;
+}
+.card-text{
+    margin: 30px 0 0 0;
+    font-size:8px;
+    color:rgba(153,153,153,1);
+}
+.main-three-one{
+    margin:20px auto 150px auto;
+    width: 90px;
+    display: flex;
+    text-align: center;
+    box-sizing: content-box;
+}
+.main-three-one div{
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    box-shadow:0px 1px 2px 0px rgba(8,1,3,0.15);
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.yuan-one,.yuan-two,.yuan-three{
+    margin: 0 10px 0 0 ;
+}
+.main-four{
+    background-color: white;
+    text-align: center;
+}
+.main-four:hover{
+    box-shadow:1px 1px 1px 1px rgba(8,1,3,0.1);
+}
+.main-five a{
+    font-size:7px;
+    font-weight:bold;
+    color:rgba(153,153,153,1);
+}
+.main-five a:hover{
+    text-decoration: none;
+    color:rgba(153,153,153,1);
+}
+.main-five:hover{
+    border-bottom: 1px solid rgba(153,153,153,1);
+}
+.main-five{
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+.main-five span{
+    display: inline-block;
+    margin-right: 10px;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(153,153,153,1);
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.main-six-left,.main-six-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.main-fix-left-top,.main-six-end-top{
+    padding-top: 30px;
+}
+.main-fix-left-end{
+    padding-bottom: 30px;
+}
+.main-six-left a,.main-six-end-top{
     color: white;
-}*/
+}
+.main-fix-center-top{
+    padding-top: 30px;
+}
+
+.main-fix-center-end{
+    padding-bottom: 30px;
+}
+.main-six-center a{
+    color: white;
+}
+.main-six-end{
+    display: flex;
+    flex-direction: column;
+
+}
+.main-six-end-end{
+    padding:20px 0 20px 0;
+}
+
+
+
+
+

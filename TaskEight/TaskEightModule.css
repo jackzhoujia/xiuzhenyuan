@@ -1,0 +1,159 @@
+/*最顶部的客服热线...*/
+.header-one{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+}
+.header-one-left-test{
+    margin-left: 15vw;
+    font-size: 7px;
+    color: #29B078;
+}
+.header-one-right-img{
+    margin-right: 15vw;
+}
+/*导航栏*/
+.header-nav{
+    background-color: #29B078;
+}
+.header-nav-left{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.header-nav-left span:first-child{
+    font-size:30px;
+    color:white;
+}
+.header-nav-left span:last-child{
+    color: white;
+    margin-top: -10px;
+}
+
+.header-nav-right{
+    margin: 0;
+    display: flex;
+    justify-content:flex-end;
+}
+.header-nav-right li{
+    display: flex;
+    text-decoration: none;
+    list-style-type:none;
+}
+.header-nav-right a{
+    padding: 0 40px 0 40px;
+    height: 140px;
+    line-height: 140px;
+    text-decoration: none;
+    color: white;
+    font-size:30px;
+}
+.header-nav-right a:hover{
+    text-decoration: none;
+    color: white;
+    border-bottom: 4px solid white;
+}
+/*导航栏下拉*/
+.drop-father{
+    display: none;
+}
+.drop{
+    height: 140px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.drop-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 50px;
+    background-color: rgb(71,209,151);
+    border-radius:5px;
+}
+.drop-item div{
+    width: 40px;
+    height: 5px;
+    padding: 10px 0;
+    background-color: rgb(48,136,99);
+    background-clip:content-box;
+    border-bottom: 5px solid rgb(48,136,99);
+    border-top: 5px solid rgb(48,136,99);
+    box-sizing: content-box;
+}
+/*当屏幕小于800px时,一下拉形式呈现导航栏*/
+.drop-down{
+    display: none;
+}
+.drop-down ul{
+    margin: 0;
+    background-color: #29B078;
+}
+.drop-down ul li{
+    list-style-type:none;
+    text-align: center;
+}
+.drop-down a{
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    color: #fff;
+}
+.drop-down a:hover{
+    text-decoration: none;
+}
+.drop-down ul li:hover{
+    background-color:rgba(250,250,250,0.1);
+}
+/*footer*/
+.footer-bottom-left,.footer-bottom-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-bottom-left-top,.main-six-end-top,.footer-bottom-center-top{
+    padding-top: 30px;
+}
+.footer-bottom-left-end,.footer-bottom-center-end{
+    padding-bottom: 30px;
+}
+.footer-bottom-left-a-one,.footer-bottom-left-a-two{
+    border-right:1px solid white;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+.footer-bottom-left a,.footer-bottom-left-top,.footer-bottom-end-top,.footer-bottom-center a{
+    color: white;
+}
+.footer-bottom-left a:hover,.footer-bottom-left-top:hover,.footer-bottom-end-top:hover,.footer-bottom-center a:hover{
+    color: white;
+}
+.footer-bottom-center-end a:first-child,.footer-bottom-center a:first-child{
+    padding-right: 30px;
+}
+.footer-bottom-end{
+    display: flex;
+    flex-direction: column;
+}
+.footer-bottom-end-top{
+    padding-top: 40px;
+}
+.footer-bottom-end-end{
+    padding:0 0 40px 0;
+}
+.andi{
+    line-height: 5vh;
+    background-color: rgb(38,162,111);
+    text-align: center;
+    color: white;
+}
+.main-one{
+    display: flex;
+    padding: 0 10vw;
+    line-height: 5vh;
+}
+.main-one span:first-child {
+    font-weight: bold;
+}

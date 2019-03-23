@@ -6,24 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="TaskEightIndex.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        @media screen and (max-width: 1500px) {
+            .header-nav{
+                display: none;
+            }
+            .pos-f-t{
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
-    <div class="container-fluid">
-        <div class="row" style="height: 30px;align-items: center">
-            <div class="col-3">
-                <span class="header-left-test">客服热线&nbsp;:&nbsp;010-594-78634</span>
-            </div>
-            <div class="col-6">
-            </div>
-            <div class="col-3">
-                <img src="TaskEightInexSrc\矢量智能对象.png">
-                <img src="TaskEightInexSrc\矢量智能对象2.png">
-                <img src="TaskEightInexSrc\矢量智能对象3.png">
-            </div>
+    <div class="header-one">
+        <span class="header-left-test">客服热线&nbsp;:&nbsp;010-594-78634</span>
+        <div class="header-one-right-img">
+            <img src="TaskEightInexSrc\矢量智能对象.png">
+            <img src="TaskEightInexSrc\矢量智能对象2.png">
+            <img src="TaskEightInexSrc\矢量智能对象3.png">
         </div>
     </div>
-    <ul>
+    <!--导航栏-->
+    <ul class="header-nav">
         <li>
             <a href="">首页</a>
         </li>
@@ -37,6 +42,31 @@
             <a href="">关于</a>
         </li>
     </ul>
+    <!--当屏幕小于800px时,一下拉形式呈现导航栏-->
+    <div class="pos-f-t">
+        <nav class="navbar navbar-dark"style="background-color:#29B078;height: 140px;justify-content: flex-end;padding-right: 13vw;" >
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <div class="collapse" id="navbarToggleExternalContent">
+            <ul>
+                <li>
+                    <a href="">首页</a>
+                </li>
+                <li>
+                    <a href="">职业</a>
+                </li>
+                <li>
+                    <a href="">推荐</a>
+                </li>
+                <li>
+                    <a href="">关于</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--轮播图-->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -45,13 +75,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="TaskEightInexSrc\Image.png" alt="First slide">
+                <img class="d-block w-100" src="TaskEightInexSrc\Image.png" style="height: 800px" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="TaskEightInexSrc\Image.png" alt="Second slide">
+                <img class="d-block w-100" src="TaskEightInexSrc\ChMkJ1wiBqqIGqDzAAKHeicWQe4AAt-qALVMVsAAoeS890.jpg"style="height: 800px" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="TaskEightInexSrc\Image.png" alt="Third slide">
+                <img class="d-block w-100" src="TaskEightInexSrc\timg.jpg"style="width: 1920px;height: 800px" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -65,10 +95,272 @@
     </div>
 </header>
 <main>
+    <div class="container-fluid"style="padding: 80px 10vw 0 10vw">
+        <div class="row">
+            <div class="col-xl main-one">
+                <div class="main-one-top-img-one"></div>
+                <div class="main-one-center-text">高效</div>
+                <div class="main-one-bottom-text">将五到七年的成才时间,缩短到一年到三你</div>
+            </div>
+            <div class="col-xl main-one">
+                <div class="main-one-top-img-two"> </div>
+                <div class="main-one-center-text">规范</div>
+                <div class="main-one-bottom-text">标准的实战教程,不会走弯路</div>
+            </div>
+            <div class="col-xl main-one" style="border-right:1px dashed  rgba(222,222,222,1);">
+                <div class="main-one-top-img-three"></div>
+                <div class="main-one-center-text">人脉</div>
+                <div class="main-one-bottom-text">同班好友,同院学长,技术大师,入学就混入职脉圈,为以后铺平道路。</div>
+            </div>
+            <div class="col-xl main-one"style="justify-content: center;align-items: flex-start;">
+                <div>
+                    <img src="TaskEightInexSrc/user 拷贝.png">
+                    <span class="main-one-right-text">12400</span>
+                </div>
+                <span class="main-one-right-text">累计在线学习人数</span>
+                <div>
+                    <img src="TaskEightInexSrc/user 拷贝.png">
+                    <span class="main-one-right-text">12400</span>
+                </div>
+                <span class="main-one-right-text">学院已经找到满意工作</span>
+            </div>
+        </div>
+    </div>
+    <div class="title-one">如何学习</div>
+    <div class="container-fluid"style="padding: 0 10vw;">
+        <div class="row">
+            <div class="col-xl main-two">
+                <div class="main-two-square">1</div>
+                <div class="main-two-center-text">匹配你现在的给人情况寻找适合自己的岗位</div>
+                <img src="TaskEightInexSrc/形状 7 拷贝.png">
+            </div>
+            <div class="col-xl main-two">
+                <div class="main-two-square">2</div>
+                <div class="main-two-center-text">了解职业前景薪资待遇,竞争压力等</div>
+                <img src="TaskEightInexSrc/形状 7 拷贝.png">
+            </div>
+            <div class="col-xl main-two">
+                <div class="main-two-square">3</div>
+                <div class="main-two-center-text">掌握行业内顶级技能</div>
+                <img src="TaskEightInexSrc/形状 7 拷贝.png">
+            </div>
+            <div class="col-xl main-two">
+                <div class="main-two-square">4</div>
+                <div class="main-two-center-text">查看职业目标任务</div>
+                <img src="TaskEightInexSrc/形状 7 拷贝.png">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid"style="padding: 0 10vw;margin: 50px 0 0 0">
+        <div class="row">
+            <div class="col-xl main-two">
+                <div class="main-two-square">5</div>
+                <div class="main-two-center-text">参考学习资料,掌握技能点,逐个完成任务</div>
+                <img src="TaskEightInexSrc/形状 7 拷贝.png">
+            </div>
+            <div class="col-xl main-two">
+                <div class="main-two-square">6</div>
+                <div class="main-two-center-text">加入班级和小伙伴们互帮互助,一块学习</div>
+                <img src="TaskEightInexSrc/形状 7 拷贝.png">
+            </div>
+            <div class="col-xl main-two">
+                <div class="main-two-square">7</div>
+                <div class="main-two-center-text">选择导师,一路引导,加速自己成长</div>
+                <img src="TaskEightInexSrc/形状 7 拷贝.png">
+            </div>
+            <div class="col-xl main-two">
+                <div class="main-two-square">8</div>
+                <div class="main-two-center-text">完成职业技能,升级业界大牛</div>
+                <img src="TaskEightInexSrc/形状 7 拷贝.png">
+            </div>
+        </div>
+    </div>
 
+    <div class="title-two">优秀学员展示</div>
+    <div class="container-fluid"style="padding: 0 10vw;margin: 50px 0 20px 0">
+        <div class="row">
+            <div class="col-xl main-three">
+                <div class="card">
+                    <img src="TaskEightInexSrc/Avatar.png" alt="Card image cap"style="margin-top: 20px">
+                    <div class="card-body">
+                        <h5 class="card-title">技术总监&nbsp;:&nbsp;罗大佑</h5>
+                        <p class="card-text">百度技术总监:互联网基础服务领域,从事虚拟主机,云服务器,域名.曾任新网高级技术经理,负责技术研发,团队管理与建设</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl main-three">
+                <div class="card">
+                    <img src="TaskEightInexSrc/Avatart.png" alt="Card image cap"style="margin-top: 20px">
+                    <div class="card-body">
+                        <h5 class="card-title">技术总监&nbsp;:&nbsp;罗大佑</h5>
+                        <p class="card-text">百度技术总监:互联网基础服务领域,从事虚拟主机,云服务器,域名.曾任新网高级技术经理,负责技术研发,团队管理与建设</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl main-three">
+                <div class="card">
+                    <img src="TaskEightInexSrc/Avatarth.png" alt="Card image cap"style="margin-top: 20px">
+                    <div class="card-body">
+                        <h5 class="card-title">技术总监&nbsp;:&nbsp;罗大佑</h5>
+                        <p class="card-text">百度技术总监:互联网基础服务领域,从事虚拟主机,云服务器,域名.曾任新网高级技术经理,负责技术研发,团队管理与建设</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl main-three">
+                <div class="card">
+                    <img src="TaskEightInexSrc/pic.png" alt="Card image cap"style="margin-top: 20px">
+                    <div class="card-body">
+                        <h5 class="card-title">技术总监&nbsp;:&nbsp;罗大佑</h5>
+                        <p class="card-text">百度技术总监:互联网基础服务领域,从事虚拟主机,云服务器,域名.曾任新网高级技术经理,负责技术研发,团队管理与建设</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-three-one">
+        <div class="yuan-one"></div>
+        <div class="yuan-two"></div>
+        <div class="yuan-three"></div>
+        <div class="yuan-four"></div>
+    </div>
+
+    <div class="title-two">战略合作企业</div>
+    <div class="container-fluid"style="padding: 0 10vw 100px 10vw;">
+        <div class="row">
+            <div class="col-xl main-four">
+                <img src="TaskEightInexSrc/技能树首页_14.jpg">
+            </div>
+            <div class="col-xl main-four">
+                <img src="TaskEightInexSrc/技能树首页_08.jpg">
+            </div>
+            <div class="col-xl main-four">
+                <img src="TaskEightInexSrc/技能树首页_03.jpg">
+            </div>
+            <div class="col-xl main-four">
+                <img src="TaskEightInexSrc/技能树首页_11.jpg">
+            </div>
+            <div class="col-xl main-four">
+                <img src="TaskEightInexSrc/技能树首页_05.png">
+            </div>
+        </div>
+    </div>
 </main>
 <footer>
-
+    <div class="container-fluid"style="padding: 0 10vw 0 10vw">
+        <div class="row">
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">手机软件</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">教师招聘</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">找工作</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">教师招聘</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">找工作</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">教师招聘</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">找工作</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">教师招聘</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">找工作</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">教师招聘</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid"style="padding: 0 10vw 0 10vw">
+        <div class="row">
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">手机软件</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">教师招聘</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">找工作</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">教师招聘</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">找工作</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">教师招聘</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">找工作</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">教师招聘</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">找工作</a>
+            </div>
+            <div class="col-xl main-five">
+                <span></span>
+                <a href="">教师招聘</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid"style="padding: 0 10vw 0 10vw;background-color: rgb(38,162,111)">
+        <div class="row">
+            <div class="col-xl main-six-left">
+                <a href=""class="main-fix-left-top">技能树-改变你我</a>
+                <div class="main-fix-left-end">
+                    <a href="">关于我们</a>
+                    <a href="">联系我们</a>
+                    <a href="">合作企业</a>
+                </div>
+            </div>
+            <div class="col-xl main-six-center">
+                <a href="" class="main-fix-center-top">旗下网站</a>
+                <div class="main-fix-center-center">
+                    <a href="">操船云孵化器</a>
+                    <a href="">最强IT特训营</a>
+                </div>
+                <div class="main-fix-center-end">
+                    <a href="">葡萄藤轻游戏</a>
+                    <a href="">桌游精灵</a>
+                </div>
+            </div>
+            <div class="col-xl main-six-end">
+                <span class="main-six-end-top">微信公众平台</span>
+                <div class="main-six-end-end"><img src="TaskEightInexSrc/qrcode_for_gh_32213eeb65ba_1280.png"></div>
+            </div>
+        </div>
+    </div>
 </footer>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
