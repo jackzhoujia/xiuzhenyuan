@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="010918f0-b6f3-48b2-8325-4c6bffe35672" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightCompangySrc/图层 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightCompangySrc/战略合作企业_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/Avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/Avatart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/Avatarth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/Shape 253.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/archive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/pic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/qrcode_for_gh_32213eeb65ba_1280.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/rocket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/timg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/user 拷贝.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/形状 7 拷贝.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/技能树首页_03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/技能树首页_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/技能树首页_08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/技能树首页_11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/技能树首页_14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/椭圆 8 拷贝.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightInexSrc/椭圆 8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightJob.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightJobSrc/图层 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightJobSrc/形状 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskEight/TaskEightModule.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskEight/TaskEightIndex.css" beforeDir="false" afterPath="$PROJECT_DIR$/TaskEight/TaskEightIndex.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskEight/TaskEightIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/TaskEight/TaskEightIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskOne/TaskOne.html" beforeDir="false" afterPath="$PROJECT_DIR$/TaskOne/TaskOne.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -146,11 +120,6 @@
               <item name="xiuzhenyuan" type="b2602c69:ProjectViewProjectNode" />
               <item name="xiuzhenyuan" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="xiuzhenyuan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xiuzhenyuan" type="462c0819:PsiDirectoryNode" />
-              <item name="TaskSix" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -193,7 +162,7 @@
       <workItem from="1552445674537" duration="20106000" />
       <workItem from="1552475497784" duration="91034000" />
       <workItem from="1552733912276" duration="182067000" />
-      <workItem from="1553337567158" duration="1203000" />
+      <workItem from="1553337567158" duration="1967000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1552279354770</created>
@@ -314,11 +283,25 @@
       <option name="project" value="LOCAL" />
       <updated>1553131386269</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="11">
+      <created>1553338867175</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1553338867175</updated>
+    </task>
+    <task id="LOCAL-00019" summary="11">
+      <created>1553339017948</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1553339017949</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355747000" />
+    <option name="totallyTimeSpent" value="356511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
