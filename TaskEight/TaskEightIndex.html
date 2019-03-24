@@ -5,67 +5,102 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="TaskEightIndex.css" rel="stylesheet" type="text/css" />
+    <link href="TaskEightModule.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
-        @media screen and (max-width: 1500px) {
-            .header-nav{
+       @media screen and (max-width: 1000px) {
+            .header-nav-right {
                 display: none;
             }
-            .pos-f-t{
+            .drop-father {
                 display: block;
             }
+            .main-five{
+                flex-basis: 20%;
+                padding: 0;
+            }
+            .main-one{
+                border: none;
+            }
+            .main-one-four{
+                align-items: center;
+            }
+            .main-t{
+                margin: 0
+            }
+            .main-four{
+                padding: 30px 0;
+            }
+        }
+
+        .header-nav {
+            padding: 0 10vw 0 10vw;
+        }
+        .footer-bottom {
+            padding: 0 10vw 0 10vw;
+            background-color: rgb(38, 162, 111);
+            border-bottom: 0.5px solid white;
         }
     </style>
 </head>
 <body>
 <header>
-    <div class="header-one">
-        <span class="header-left-test">客服热线&nbsp;:&nbsp;010-594-78634</span>
-        <div class="header-one-right-img">
-            <img src="TaskEightInexSrc\矢量智能对象.png">
-            <img src="TaskEightInexSrc\矢量智能对象2.png">
-            <img src="TaskEightInexSrc\矢量智能对象3.png">
-        </div>
-    </div>
-    <!--导航栏-->
-    <ul class="header-nav">
-        <li>
-            <a href="">首页</a>
-        </li>
-        <li>
-            <a href="">职业</a>
-        </li>
-        <li>
-            <a href="">推荐</a>
-        </li>
-        <li>
-            <a href="">关于</a>
-        </li>
-    </ul>
-    <!--当屏幕小于800px时,一下拉形式呈现导航栏-->
-    <div class="pos-f-t">
-        <nav class="navbar navbar-dark"style="background-color:#29B078;height: 140px;justify-content: flex-end;padding-right: 13vw;" >
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
-        <div class="collapse" id="navbarToggleExternalContent">
-            <ul>
-                <li>
-                    <a href="">首页</a>
-                </li>
-                <li>
-                    <a href="">职业</a>
-                </li>
-                <li>
-                    <a href="">推荐</a>
-                </li>
-                <li>
-                    <a href="">关于</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+        <div class="header-one">
+                <span class="header-one-left-test">客服热线&nbsp;:&nbsp;010-594-78634</span>
+                <div class="header-one-right-img">
+                    <img src="TaskEightInexSrc\矢量智能对象.png">
+                    <img src="TaskEightInexSrc\矢量智能对象2.png">
+                    <img src="TaskEightInexSrc\矢量智能对象3.png">
+                </div>
+            </div>
+             <!--导航栏-->
+        <div class="container-fluid header-nav">
+                <div class="row">
+                    <div class="col header-nav-left">
+                        <span>技能树</span><span>www.jishu.com</span>
+                    </div>
+                    <div class="col">
+                        <ul class="header-nav-right">
+                            <li>
+                                <a href="TaskEightIndex.html" >首页</a>
+                            </li>
+                            <li>
+                                <a href="TaskEightJob.html" >职业</a>
+                            </li>
+                            <li>
+                                <a href="TaskEightCompany.html" >推荐</a>
+                            </li>
+                            <li>
+                                <a href="">关于</a>
+                            </li>
+                        </ul>
+                        <div class="drop-father">
+                            <div class="drop" onclick="showDrop()">
+                                <div class="drop-item">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--当屏幕小于800px时,一下拉形式呈现导航栏-->
+            <div class="drop-down">
+                <ul>
+                    <li>
+                        <a href="TaskEightIndex.html" >首页</a>
+                    </li>
+                    <li>
+                        <a href="TaskEightJob.html" >职业</a>
+                    </li>
+                    <li>
+                        <a href="TaskEightCompany.html" >推荐</a>
+                    </li>
+                    <li>
+                        <a href="">关于</a>
+                    </li>
+                </ul>
+            </div>
     <!--轮播图-->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -75,13 +110,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="TaskEightInexSrc\Image.png" style="height: 800px" alt="First slide">
+                <img class="d-block w-100" src="TaskEightInexSrc\Image.png" style="height: 400px" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="TaskEightInexSrc\ChMkJ1wiBqqIGqDzAAKHeicWQe4AAt-qALVMVsAAoeS890.jpg"style="height: 800px" alt="Second slide">
+                <img class="d-block w-100" src="TaskEightInexSrc\ChMkJ1wiBqqIGqDzAAKHeicWQe4AAt-qALVMVsAAoeS890.jpg"style="height: 400px" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="TaskEightInexSrc\timg.jpg"style="width: 1920px;height: 800px" alt="Third slide">
+                <img class="d-block w-100" src="TaskEightInexSrc\timg.jpg"style="width: 1920px;height: 400px" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -97,22 +132,22 @@
 <main>
     <div class="container-fluid"style="padding: 80px 10vw 0 10vw">
         <div class="row">
-            <div class="col-xl main-one">
+            <div class="col-xl-4 col-lg-6 main-one">
                 <div class="main-one-top-img-one"></div>
                 <div class="main-one-center-text">高效</div>
                 <div class="main-one-bottom-text">将五到七年的成才时间,缩短到一年到三你</div>
             </div>
-            <div class="col-xl main-one">
+            <div class="col-xl col-lg-6 main-one">
                 <div class="main-one-top-img-two"> </div>
                 <div class="main-one-center-text">规范</div>
                 <div class="main-one-bottom-text">标准的实战教程,不会走弯路</div>
             </div>
-            <div class="col-xl main-one" style="border-right:1px dashed  rgba(222,222,222,1);">
+            <div class="col-xl main-one main-one-three" >
                 <div class="main-one-top-img-three"></div>
                 <div class="main-one-center-text">人脉</div>
                 <div class="main-one-bottom-text">同班好友,同院学长,技术大师,入学就混入职脉圈,为以后铺平道路。</div>
             </div>
-            <div class="col-xl main-one"style="justify-content: center;align-items: flex-start;">
+            <div class="col-xl main-one main-one-four">
                 <div>
                     <img src="TaskEightInexSrc/user 拷贝.png">
                     <span class="main-one-right-text">12400</span>
@@ -151,7 +186,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid"style="padding: 0 10vw;margin: 50px 0 0 0">
+    <div class="container-fluid main-t"style="padding: 0 10vw;">
         <div class="row">
             <div class="col-xl main-two">
                 <div class="main-two-square">5</div>
@@ -226,7 +261,7 @@
 
     <div class="title-two">战略合作企业</div>
     <div class="container-fluid"style="padding: 0 10vw 100px 10vw;">
-        <div class="row">
+        <div class="row"style="background-color:white;" >
             <div class="col-xl main-four">
                 <img src="TaskEightInexSrc/技能树首页_14.jpg">
             </div>
@@ -334,34 +369,48 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid"style="padding: 0 10vw 0 10vw;background-color: rgb(38,162,111)">
-        <div class="row">
-            <div class="col-xl main-six-left">
-                <a href=""class="main-fix-left-top">技能树-改变你我</a>
-                <div class="main-fix-left-end">
-                    <a href="">关于我们</a>
-                    <a href="">联系我们</a>
-                    <a href="">合作企业</a>
+    <div class="container-fluid footer-bottom">
+            <div class="row">
+                <div class="col-xl footer-bottom-left">
+                    <span class="footer-bottom-left-top">技能树-改变你我</span>
+                    <div class="footer-bottom-left-end">
+                        <a href="" class="footer-bottom-left-a-one">关于我们</a>
+                        <a href="" class="footer-bottom-left-a-two">联系我们</a>
+                        <a href="">合作企业</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl main-six-center">
-                <a href="" class="main-fix-center-top">旗下网站</a>
-                <div class="main-fix-center-center">
-                    <a href="">操船云孵化器</a>
-                    <a href="">最强IT特训营</a>
+                <div class="col-xl footer-bottom-center">
+                    <a href="" class="footer-bottom-center-top">旗下网站</a>
+                    <div class="footer-bottom-center-center">
+                        <a href="">操船云孵化器</a>
+                        <a href="">最强IT特训营</a>
+                    </div>
+                    <div class="footer-bottom-center-end">
+                        <a href="">葡萄藤轻游戏</a>
+                        <a href="">桌游精灵</a>
+                    </div>
                 </div>
-                <div class="main-fix-center-end">
-                    <a href="">葡萄藤轻游戏</a>
-                    <a href="">桌游精灵</a>
+                <div class="col-xl footer-bottom-end">
+                    <span class="footer-bottom-end-top">微信公众平台</span>
+                    <div class="footer-bottom-end-end"><img src="TaskEightInexSrc/qrcode_for_gh_32213eeb65ba_1280.png">
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl main-six-end">
-                <span class="main-six-end-top">微信公众平台</span>
-                <div class="main-six-end-end"><img src="TaskEightInexSrc/qrcode_for_gh_32213eeb65ba_1280.png"></div>
             </div>
         </div>
-    </div>
+        <div class="andi">
+            Copyright&nbsp;2015技能书&nbsp;www.jishu.com&nbsp;All&nbsp;Right&nbsp;Reserved&nbsp;|&nbsp;京ICP备13005880号</div>
 </footer>
+<script>
+        function showDrop() {
+            var dd = document.getElementsByClassName("drop-down");
+            if (dd[0].style.display == "none") {
+                dd[0].style.display = "block";
+            } else {
+                dd[0].style.display = "none";
+            }
+
+        }
+    </script>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

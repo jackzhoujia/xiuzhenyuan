@@ -42,12 +42,12 @@
     list-style-type:none;
 }
 .header-nav-right a{
-    padding: 0 40px 0 40px;
-    height: 140px;
-    line-height: 140px;
+    padding: 0 20px 0 20px;
+    height: 100px;
+    line-height: 100px;
     text-decoration: none;
     color: white;
-    font-size:30px;
+    font-size:20px;
 }
 .header-nav-right a:hover{
     text-decoration: none;
@@ -59,7 +59,7 @@
     display: none;
 }
 .drop{
-    height: 140px;
+    height: 100px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -89,6 +89,7 @@
 }
 .drop-down ul{
     margin: 0;
+    padding: 0;
     background-color: #29B078;
 }
 .drop-down ul li{
