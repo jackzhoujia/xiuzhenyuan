@@ -73,6 +73,14 @@ td{
 .main{
     padding: 0;
 }
+.main-one{
+    display: flex;
+    padding: 0 10vw;
+    line-height: 5vh;
+}
+.main-one span:first-child {
+    font-weight: bold;
+}
 .table-one-father{
     position: relative;
 }

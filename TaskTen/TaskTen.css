@@ -1,0 +1,116 @@
+html,body{
+    margin: 0;
+}
+.header-two{
+    height:4px;
+    background-color:#CCCCCC;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.header-two-top{
+    width: 15px;
+    height: 15px;
+    background-color: #CCCCCC;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    margin-top: -5.5px;
+}
+.header-two-top div{
+    font-size:10px;
+    color: white;
+    line-height: 15px;
+    text-align: center;
+}
+.header-two-bottom{
+    font-size:10px;
+    margin-top: 10px;
+    color:#CCCCCC;
+}
+.header-two:hover{
+    background-color: #FF7F02;
+}
+.header-two:hover .header-two-top{
+    background-color: #FF7F02;
+}
+.header-two:hover .header-two-bottom{
+    color: #FF7F02;
+}
+main{
+    margin-bottom: 10vh;
+}
+.main-title{
+    margin: 10vh 0 1vh 15vw;
+    font-size:16px;
+    font-weight:600;
+    padding-left: 5px;
+    border-left: 2px solid #1D7AD9;
+    }
+.main{
+    margin:0 0 0 15vw;
+    width: 70vw;
+    border:1px solid rgba(232, 232, 232, 1);
+}
+.main-one-title{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #E6E6E6;
+}
+.main-one-title img{
+    margin: 0 10px;
+}
+.main-one-title span{
+    color: #1D7AD9;
+}
+
+.main-one,.main-three{
+    position: relative;
+    display: flex;
+    text-align: center;
+    background-color: #FBFCFF;
+}
+.input-radio{
+    margin: 20px 10px 20px 30px;
+}
+.main-one select,.main-two select,.main-three select{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.main-two{
+    position: relative;
+    background-color: #FBFCFF;
+}
+.main-two-one{
+    padding: 20px 0 20px 30px;
+    display: flex;
+    align-items: center;
+}
+.main-two-two{
+    padding: 0px 0 20px 30px;
+    display: flex;
+    align-items: center;
+}
+.dd-center{
+    margin: 0 15px;
+}
+.input-text{
+    width: 60px;
+}
+.main button{
+    border: none;
+    display: block;
+    margin: 50px auto 50px auto;
+    width: 120px;
+    height: 40px;
+    border-radius:5px;
+    background-color: red;
+    color: white;
+}
+.dd{
+    margin-left: 20px;
+}

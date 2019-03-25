@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 5vh;
 }
 .header-one-left-test{
     margin-left: 15vw;
@@ -136,6 +135,7 @@
 }
 .footer-bottom-end{
     display: flex;
+    align-items: flex-end;
     flex-direction: column;
 }
 .footer-bottom-end-top{
@@ -149,12 +149,4 @@
     background-color: rgb(38,162,111);
     text-align: center;
     color: white;
-}
-.main-one{
-    display: flex;
-    padding: 0 10vw;
-    line-height: 5vh;
-}
-.main-one span:first-child {
-    font-weight: bold;
 }

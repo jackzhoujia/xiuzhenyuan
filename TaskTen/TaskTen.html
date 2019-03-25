@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="TaskTen.css" rel="stylesheet" type="text/css" />
+    <link href="..\TaskEight\TaskEightModule.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        @media screen and (max-width: 600px) {
+            .header-nav-right {
+                display: none;
+            }
+
+            .drop-father {
+                display: block;
+            }
+
+            .main-title {
+                margin: 0 0 1vh 15vw;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            .main-title {
+                margin: 0 0 1vh 15vw;
+            }
+
+            .header-two {
+                margin-bottom: 50px;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+
+            .main-one,
+            .main-two-one,
+            .main-two-two,
+            .main-three {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: #FBFCFF;
+            }
+
+            .dd-center {
+                margin: 15px 0;
+            }
+        }
+
+        .header-nav {
+            padding: 0 10vw 0 10vw;
+        }
+
+        .header-one-right-img button {
+            background-color: #1D7AD9;
+            height: 5vh;
+            color: white;
+            border: none;
+            outline: none;
+        }
+
+        .header-nav {
+            padding: 0 15vw;
+            background-color: #F9F9F9;
+        }
+
+        .header-nav-right {
+            height: 10vh;
+            align-items: center;
+        }
+
+        .header-nav-right li {
+            padding-left: 40px;
+        }
+
+        .header-nav-right button {
+            border: none;
+            outline: none;
+            background-color: white;
+            font-size: 10px;
+            padding: 10px 10px;
+            border-radius: 5px;
+        }
+
+        .header-nav-right button:hover {
+            color: white;
+            background-color: #1D7AD9;
+        }
+
+        .drop-down a {
+            color: #1D7AD9;
+        }
+
+        .drop-down ul li:hover {
+            background-color: rgba(29, 122, 217, 0.3);
+        }
+
+        .footer-bottom {
+            background-color: #F9F9F9;
+            padding: 0 15vw;
+        }
+
+        .footer-bottom a,
+        .footer-bottom span {
+            color: #999999;
+        }
+
+        .footer-bottom span {
+            font-size: 15px;
+        }
+
+        .footer-bottom-left-top {
+            padding-top: 30px;
+        }
+
+        .footer-bottom-center {
+            justify-content: flex-start;
+        }
+
+        .footer-bottom-center-center {
+            padding-top: 30px;
+        }
+
+        .footer-bottom-center-end {
+            padding-top: 10px;
+        }
+
+        .footer-bottom-center a {
+            padding-right: 30px;
+            font-size: 10px;
+        }
+
+        .footer-bottom-end {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            flex-direction: row;
+        }
+
+        .footer-bottom-end-end {
+            padding: 0 0 0 10px;
+        }
+
+        .footer-bottom-end-text div {
+            color: #999999;
+            font-size: 10px;
+            padding-bottom: 20px;
+        }
+
+        .andi {
+            background-color: #1D7AD9;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <head>
+        <div class="header-one" id="top" style="background-color:#1D7AD9">
+            <span class="header-one-left-test" style="color:white">客服热线&nbsp;:&nbsp;010-594-78634</span>
+            <div class="header-one-right-img">
+                <button>登陆</button><button style="color: black;padding:0 15px;background-color: white;">注册</button>
+            </div>
+        </div>
+        <!--导航栏-->
+        <div class="container-fluid header-nav">
+            <div class="row">
+                <div class="col">
+                    <ul class="header-nav-right">
+                        <li>
+                            <button>首页</button>
+                        </li>
+                        <li>
+                            <button>在线定制</button>
+                        </li>
+                        <li>
+                            <button>标准箱</button>
+                        </li>
+                        <li>
+                            <button>品质保障</button>
+                        </li>
+                    </ul>
+                    <div class="drop-father">
+                        <div class="drop" onclick="showDrop()" style="height:10vh">
+                            <div class="drop-item" style="background-color:#1D7AD9">
+                                <div style="background-color: #F9F9F9;
+                                border-bottom: 5px solid #F9F9F9;
+                                border-top: 5px solid #F9F9F9;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--当屏幕小于800px时,一下拉形式呈现导航栏-->
+        <div class="drop-down">
+            <ul style="background-color: #F9F9F9;">
+                <li>
+                    <a href="">首页</a>
+                </li>
+                <li>
+                    <a href="">在线定制</a>
+                </li>
+                <li>
+                    <a href="">标准箱</a>
+                </li>
+                <li>
+                    <a href="">品质保证</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container-fluid" style="padding:5vh calc(15vw + 15px);">
+            <div class="row" style="justify-content:flex-end;">
+                <div class="col-md-8 col-sm-12">
+                    <div class="row">
+                        <div class="col-md col-sm-6 header-two">
+                            <div class="header-two-top">
+                                <div>1</div>
+                            </div>
+                            <div class="header-two-bottom">
+                                1.定制箱子
+                            </div>
+                        </div>
+                        <div class="col-md col-sm-6 header-two">
+                            <div class="header-two-top">
+                                <div>2</div>
+                            </div>
+                            <div class="header-two-bottom">
+                                2.选择数量
+                            </div>
+                        </div>
+                        <div class="col-md col-sm-6 header-two">
+                            <div class="header-two-top">
+                                <div>3</div>
+                            </div>
+                            <div class="header-two-bottom">
+                                3.上传附件
+                            </div>
+                        </div>
+                        <div class="col-md col-sm-6 header-two">
+                            <div class="header-two-top">
+                                <div>4</div>
+                            </div>
+                            <div class="header-two-bottom">
+                                4.确认下单
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </head>
+    <main>
+        <div class="main-title">
+            请您按照以下步骤来定制您的纸箱
+        </div>
+        <div class="main">
+            <div class="main-one-title">
+                <img src="TaskTenSrc/box.png">
+                <span>选择箱型</span>
+            </div>
+            <div class="main-one">
+
+                <div class="custom-control custom-radio input-radio">
+                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio1">对口箱</label>
+                </div>
+                <div class="custom-control custom-radio input-radio">
+                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio2">飞机盒</label>
+                </div>
+                <div class="custom-control custom-radio input-radio">
+                    <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio3">天底盖</label>
+                </div>
+                <select style="font-size:10px;">
+                    <option>对口箱</option>
+                    <option>飞机盒</option>
+                    <option>天底盖</option>
+                </select>
+            </div>
+            <div class="main-one-title">
+                <img src="TaskTenSrc/TaskTen.css.png">
+                <span>确定尺寸</span>
+            </div>
+            <div class="main-two">
+                <div class="main-two-one">
+                    <div class="custom-control custom-radio input-radio-center">
+                        <input type="radio" id="customRadioay" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioay">外径</label>
+                    </div>
+                    <div class="dd-center">
+                        <span>长</span>
+                        <input type="text" class="input-text">
+                        <span>mm</span>
+                    </div>
+                    <div class="dd-center">
+                        <span>宽</span>
+                        <input type="text" class="input-text">
+                        <span>mm</span>
+                    </div>
+                    <div class="dd-center">
+                        <span>高</span>
+                        <input type="text" class="input-text">
+                        <span>mm</span>
+                    </div>
+                </div>
+                <div class="main-two-two">
+                    <div class="custom-control custom-radio input-radio-center">
+                        <input type="radio" id="customRadioah" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioah">内径</label>
+                    </div>
+                    <div class="dd-center">
+                        <span>长</span>
+                        <input type="text" class="input-text">
+                        <span>mm</span>
+                    </div>
+                    <div class="dd-center">
+                        <span>宽</span>
+                        <input type="text" class="input-text">
+                        <span>mm</span>
+                    </div>
+                    <div class="dd-center">
+                        <span>高</span>
+                        <input type="text" class="input-text">
+                        <span>mm</span>
+                    </div>
+                </div>
+                <select style="font-size:10px;">
+                    <option>查看详情</option>
+                    <option>对口箱</option>
+                    <option>飞机盒</option>
+                    <option>天底盖</option>
+                </select>
+            </div>
+            <div class="main-one-title">
+                <img src="TaskTenSrc/Cut _ Scissors.png">
+                <span>选择材质</span>
+            </div>
+            <div class="main-three">
+                <div class="custom-control custom-radio input-radio">
+                    <input type="radio" id="customRadioa" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioa">三层A瓦优质</label>
+                </div>
+                <div class="custom-control custom-radio input-radio">
+                    <input type="radio" id="customRadiob" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadiob">三层A瓦优质</label>
+                </div>
+                <div class="custom-control custom-radio input-radio">
+                    <input type="radio" id="customRadioc" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioc">三层A瓦优质</label>
+                </div>
+                <div class="custom-control custom-radio input-radio">
+                    <input type="radio" id="customRadiod" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadiod">三层A瓦优质</label>
+                </div>
+                <div class="custom-control custom-radio input-radio">
+                    <input type="radio" id="customRadioe" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioe">三层A瓦优质</label>
+                </div>
+                <select style="font-size:10px;">
+                    <option>查看详情</option>
+                    <option>三层A瓦优质</option>
+                    <option>三层B瓦优质</option>
+                </select>
+            </div>
+            <button style="outline:none;">下一步</button>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid footer-bottom" id="bottom">
+            <div class="row">
+                <div class="col-xl footer-bottom-left">
+                    <span class="footer-bottom-left-top">51包装网——纸箱包装首选服务平台</span>
+
+                </div>
+                <div class="col-xl footer-bottom-center">
+                    <div class="footer-bottom-center-center">
+                        <a href="">关于我们</a>
+                        <a href="">配送流程</a>
+                        <a href="">联系我们</a>
+                    </div>
+                    <div class="footer-bottom-center-end">
+                        <a href="">下单指南</a>
+                        <a href="">媒体介绍</a>
+                    </div>
+                </div>
+                <div class="col-xl footer-bottom-end">
+                    <div class="footer-bottom-end-text">
+                        <div>TEL:400-0000-0000</div>
+                        <div>企业QQ:123456789</div>
+                        <div>微信号:XXXXX</div>
+                    </div>
+                    <div class="footer-bottom-end-end"><img
+                            src="../TaskEight/TaskEightInexSrc/qrcode_for_gh_32213eeb65ba_1280.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="andi">
+            北京五一包装科技有限公司Copyright&copy;2015&nbsp;&nbsp;&nbsp;51baozhuang.com015&nbsp;ALL&nbsp;rights&nbsp;reserved.&nbsp;京ic备99999999999-1
+        </div>
+    </footer>
+    <script>
+        function showDrop() {
+            var dd = document.getElementsByClassName("drop-down");
+            if (dd[0].style.display == "none") {
+                dd[0].style.display = "block";
+            } else {
+                dd[0].style.display = "none";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

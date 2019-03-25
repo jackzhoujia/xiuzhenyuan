@@ -10,19 +10,43 @@
         {
             margin: 0;
         }
+		.demoHidden{
+			display: none;
+		}
+		.radioInput{
+			display: inline-block;
+			width:36px;
+			height:36px;
+			border:2px solid green;
+			border-radius:100%;
+			margin-right:10px;
+			vertical-align: middle;
+		}
+		.demoHidden:checked + .radioInput:after{
+			content:"";
+			display: inline-block;
+			width:26px;
+			height:26px;
+			background:#00a1e9;
+			border-radius:100%;
+			margin-top:5px;
+			margin-left:5px;
+		}
+		.demoHidden:checked + .radioInput{
+			border:2px solid #00a1e9;
+		}
     </style>
 </head>
 <body>
-    <script>
-        function setName(obj) {
-            obj.name = "jack";
-            obj = new Object();
-            obj.name = "lose";
-        }
-        var person = new Object();
-        setName(person);
-        alert(person.name);
-    </script>
+        <label>
+                <input type="radio" name="demo-radio" class="demoHidden">
+                <span class="radioInput"></span>先生 
+            </label>
+            <label>
+                <input type="radio" name="demo-radio" class="demoHidden">
+                <span class="radioInput"></span>女士 
+            </label>
+
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
