@@ -48,10 +48,6 @@ ul {
 #menu:checked ~ .main-content {
   margin-left: 65vw;
 }
-input[type=checkbox] + label {
-  color: #ccc;
-  font-style: italic;
-} 
 //主体内容/右侧内容
 .main-content {
   position: relative;

@@ -46,10 +46,6 @@ ul {
 #menu:checked ~ .main-content {
   margin-left: 65vw; }
 
-input[type=checkbox] + label {
-  color: #ccc;
-  font-style: italic; }
-
 .main-content {
   position: relative;
   width: 100vw;
