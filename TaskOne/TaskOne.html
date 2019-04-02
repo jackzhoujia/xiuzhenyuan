@@ -7,15 +7,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="TaskOne.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-</body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <button onclick="start()">开始闪</button>
+    <button onclick="stop()">结束闪</button>
+
+    <script>
+        var backgroundColor = new Array;//随机数
+        var randomNumber = new Array;//随机颜色
+        var box = document.getElementsByClassName("box");
+        //开始
+        var time;
+        function start() {
+            //清除定时器
+            // clearInterval(time);
+           setInterval("showPic()",1000);
+            // document.getElementsByTagName("button")[0].disabled = true;
+        }
+        function showPic() {
+            for (var i = 0; i < 9; i++) {
+                box[i].style.backgroundColor = "rgb(255,166,0)";
+            } 
+            makeColor();
+            for (var i = 0; i < 3; i++) {
+                box[randomNumber[i]].style.backgroundColor = backgroundColor[i];
+            }
+        }
+        function makeColor() {
+            var Numbers = new Array;//随机颜色
+            var Colors = new Array;
+            for (var i = 0; i >= 0; i++) {
+                for (var i = 0; i < 3; i++) {
+                    var a = Math.round(Math.random() * 255);
+                    var b = Math.round(Math.random() * 255);
+                    var c = Math.round(Math.random() * 255);
+                    var color = "rgb(" + a + "," + b + "," + c + ")";
+                    Colors.push(color);
+                }
+                if (Colors[0] != Colors[1] && Colors[1] != Colors[2] && Colors[2] != Colors[0]) {
+                    backgroundColor = Colors;
+                    break;
+                } else {
+                    Colors = [];
+                }
+            }
+            console.log(backgroundColor);
+            for (var i = 0; i >= 0; i++) {
+                for (var i = 0; i < 3; i++) {
+                    var Number = Math.round(Math.random() * 8);
+                    Numbers.push(Number);
+                }
+                if (Numbers[0] != Numbers[1] && Numbers[1] != Numbers[2] && Numbers[2] != Numbers[0]) {
+                    randomNumber = Numbers;
+                    break;
+                } else {
+                    Numbers = [];  
+                }
+
+            }
+            console.log(randomNumber);
+        }
+    </script>
+
 </html>

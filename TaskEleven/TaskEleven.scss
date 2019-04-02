@@ -5,6 +5,7 @@ html
 body{
     margin: 0;
 }
+// $location:top !default;//全局变量
 header
 {
     position: fixed;
@@ -12,28 +13,41 @@ header
     width: 100%;
     background-color: rgb(95,192,205);
 }
-header span:first-child,.header-center-text,header span:last-child{
+.header-left,.header-center-text,.header-right{
     color: white;
     line-height: 44px;
 }
-header span:first-child{
+ @mixin header-position($location:left,$type:"header"){
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    left: 16px;
+    @if $type == "header"{
+    #{$location}: 16px;
+    }
+    @if $type == "img"{
+        padding: 0 22px;
+    }
+    @if $type =="input"{
+    #{$location}: 60px;
+    height: 30px;
+    padding: 0 0 0 20px;
+    border: none;
+    border-left: 1px solid #E1E5E7;
+    outline: none;
+    }
+}
+.header-left{
+    @include header-position();
+}
+.header-right{
+    @include header-position(right);
 }
 .header-center-text{
     text-align: center;
     font-size: 18px;
 }
-header span:last-child{
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 16px;
-}
 main{
-    margin-top:60px ;
+    margin-top:60px;
 }
 ul{
     padding: 0;
@@ -47,21 +61,10 @@ li{
     list-style-type:none;
 }
 li img{
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    padding: 0 22px;
+    @include header-position(right,"img"); 
 }
 li input{
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    left: 60px;
-    height: 30px;
-    padding: 0 0 0 20px;
-    border: none;
-    border-left: 1px solid #E1E5E7;
-    outline: none;
+    @include header-position(left,"input");  
 }
 footer button{
     height: 50px;
@@ -78,4 +81,3 @@ a
     margin: 10px 10px 0 0 ;
     color: gray;
 }
-

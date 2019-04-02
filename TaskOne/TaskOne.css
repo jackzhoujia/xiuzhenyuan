@@ -2,7 +2,7 @@ body
 {
     margin: 0;
 }
-div
+.box
 {
     float: left;
     padding-left: 30%;

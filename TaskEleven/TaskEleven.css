@@ -1,0 +1,78 @@
+html {
+  background-color: #eff0f4; }
+
+body {
+  margin: 0; }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #5fc0cd; }
+
+.header-left, .header-center-text, .header-right {
+  color: white;
+  line-height: 44px; }
+
+.header-left {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 16px; }
+
+.header-right {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 16px; }
+
+.header-center-text {
+  text-align: center;
+  font-size: 18px; }
+
+main {
+  margin-top: 60px; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+li {
+  position: relative;
+  margin: 0 0 16px;
+  height: 50px;
+  background-color: white;
+  list-style-type: none; }
+
+li img {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0 22px; }
+
+li input {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 60px;
+  height: 30px;
+  padding: 0 0 0 20px;
+  border: none;
+  border-left: 1px solid #E1E5E7;
+  outline: none; }
+
+footer button {
+  height: 50px;
+  width: 100%;
+  font-size: 18px;
+  color: white;
+  background-color: #5fc0cd;
+  border: none;
+  outline: none; }
+
+a {
+  float: right;
+  margin: 10px 10px 0 0;
+  color: gray; }
+
+/*# sourceMappingURL=TaskEleven.css.map */

@@ -1,0 +1,231 @@
+html,body
+{
+    margin: 0;
+}
+%jueduidingwei{
+    position: fixed;
+    z-index:1;
+    width: 100%;
+}
+%flex-space-between-center{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+header{
+    @extend %jueduidingwei;
+    top: 0;
+}
+.header-one{
+    @extend %flex-space-between-center;
+    height: 44px;
+    background-color: rgb(95,192,205);
+}
+%header-one-leftAndRight{
+    width: 21px;
+    height: 22px;
+    margin-right: 15px;
+}
+.header-one span{
+    @extend %header-one-leftAndRight;
+    background: url("TaskSixPrc/css_sprites.png")-10px -10px;
+}
+.header-one-left{
+    @extend %header-one-leftAndRight;
+}
+.center-test{
+    display: flex;
+    height: 35px;
+    width: 143px;
+    background-color: #55A8B3;
+    border-radius:3px;
+}
+.center-test-one{
+    font-size: 17px;
+    color: white;
+    flex: auto;
+    text-align: center;
+    line-height: 35px;
+}
+.center-test-two{
+    @extend .center-test-one;
+    color: #5FC0CD;
+    background-color: white;
+    border-radius:3px;
+}
+header ul{
+    padding: 0;
+    margin: 0;
+}
+.headerTwo{
+    height: 40px;
+    @extend %flex-space-between-center;
+    border-bottom: 1px solid #E1E5E7;
+    background-color: white;
+}
+@for $i from 1 to 4 {
+    .headerTwoTest#{$i}{
+        @extend %flex-space-between-center;
+        position: relative;
+        height: 40px;
+        flex:auto;
+        border-right: 1px solid #E1E5E7;
+    }
+    .headerTwoTest#{$i} span{
+        margin: auto;
+        text-align: center;
+        width: 70px;
+        font-size: 14px;
+        color: #999999;
+    }
+    .headerTwoTest#{$i}:hover .dropdown-content{
+        display: block;
+    }
+    .headerTwoSrc#{$i}{
+        padding-right: 10px;
+        width: 7px;
+        height: 4px;
+        background: url("TaskSixPrc/css_sprites.png")-10px -93px;
+    }
+}
+.headerTwoTest3{
+    border-right: 1px solid white;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: none;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+.dropdown-content p{
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.dropdown-content p:hover{
+    background-color: #555;
+    color: white;
+}
+
+
+main {
+    width: 100%;
+    margin: 84px 0 0 0;
+    height: 78vh;
+    overflow-y: auto;
+}
+main ul{
+    padding: 0;
+    margin: 0;
+}
+@for $i from 1 to 9 {
+    main .li#{$i} {
+        list-style-type:none;
+        padding: 10px 0 10px 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-bottom:1px solid rgb(225,229,231);
+    }
+    main .li#{$i} span{
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.mainOneSrc{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background: url("TaskSixPrc/css_sprites.png")-94px -10px;
+    margin: 0 15px 0 15px;
+}
+.mainThreeSrc{
+    @extend .mainOneSrc;
+    background: url("TaskSixPrc/css_sprites.png")-94px -42px;
+}
+.mainLeftTest{
+    margin-left: 42px;
+}
+.mainRightTest{
+    color: red;
+}
+.mainOne,.mainTwo{
+    margin-bottom: 10px;
+}
+.mainTwo{
+    display: flex;
+    justify-content:space-between;
+    margin-right: 10px;
+}
+.mainTwo div{
+    display: flex;
+}
+.mainRightSrc{
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #5FC0CD;
+    border-right: 2px solid #5FC0CD;
+    transform: rotate(45deg);
+}
+footer{
+    @extend %jueduidingwei;
+    bottom: 0;
+    @extend %flex-space-between-center;
+    height: 50px;
+    background-color: rgba(248,250,251,1);
+    align-items:center;
+}
+%footOneAneThree{
+    @extend %flex-space-between-center;
+    flex-direction: column;
+}
+.footerOne{
+    @extend %footOneAneThree;
+    margin-left: 70px;
+}
+.footerLeftSrc{
+    width: 23px;
+    height: 20px;
+    background: url("TaskSixPrc/css_sprites.png")-51px -10px;
+    margin-bottom: 3px;
+}
+.footerOneTest{
+    font-size: 10px;
+    color: #5FC0CD;
+    width: 50px;
+    text-align: center;
+}
+.footerThree{
+    @extend %footOneAneThree;
+    margin-right: 70px;
+}
+.footerRightSrc{
+    @extend .footerLeftSrc;
+    background: url("TaskSixPrc/css_sprites.png")-10px -52px;
+}
+.footerThree div{
+    @extend .footerOneTest;
+    color: #999999;
+}
+.footerTwo{
+    width: 47px;
+    height: 47px;
+    background-color: rgba(95,192,205,1);
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: flex;
+}
+.footerCenterSrc{
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background: url("TaskSixPrc/css_sprites.png")-51px -52px;
+}
