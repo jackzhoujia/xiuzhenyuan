@@ -21,13 +21,18 @@
             }
 
             .main-title {
-                margin: 0 0 1vh 15vw;
+                margin: 0 15px 1vh 15px;
+            }
+
+            .andi {
+                display: flex;
+                flex-direction: column;
             }
         }
 
         @media screen and (max-width: 750px) {
             .main-title {
-                margin: 0 0 1vh 15vw;
+                margin: 0 15px 1vh 15px;
             }
 
             .header-two {
@@ -53,7 +58,15 @@
         }
 
         .header-nav {
-            padding: 0 10vw 0 10vw;
+            padding: 0 10px;
+        }
+
+        .header-one-left-test {
+            margin-left: 15px;
+        }
+
+        .header-one-right-img {
+            margin-right: 15px;
         }
 
         .header-one-right-img button {
@@ -65,7 +78,7 @@
         }
 
         .header-nav {
-            padding: 0 15vw;
+            padding: 0 15px;
             background-color: #F9F9F9;
         }
 
@@ -102,7 +115,7 @@
 
         .footer-bottom {
             background-color: #F9F9F9;
-            padding: 0 15vw;
+            padding: 0 15px;
         }
 
         .footer-bottom a,
@@ -156,6 +169,8 @@
         .andi {
             background-color: #1D7AD9;
             font-size: 10px;
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
@@ -216,7 +231,7 @@
                 </li>
             </ul>
         </div>
-        <div class="container-fluid" style="padding:5vh calc(15vw + 15px);">
+        <div class="container-fluid" style="padding:5vh calc(15px + 15px);">
             <div class="row" style="justify-content:flex-end;">
                 <div class="col-md-8 col-sm-12">
                     <div class="row">
@@ -298,17 +313,17 @@
                     </div>
                     <div class="dd-center">
                         <span>长</span>
-                        <input type="text" class="input-text">
+                        <input type="text" class="input-text" maxlength="6" oninput="value=value.replace(/[^\d]/g,'')">
                         <span>mm</span>
                     </div>
                     <div class="dd-center">
                         <span>宽</span>
-                        <input type="text" class="input-text">
+                        <input type="text" class="input-text" maxlength="6" oninput="value=value.replace(/[^\d]/g,'')">
                         <span>mm</span>
                     </div>
                     <div class="dd-center">
                         <span>高</span>
-                        <input type="text" class="input-text">
+                        <input type="text" class="input-text" maxlength="6" oninput="value=value.replace(/[^\d]/g,'')">
                         <span>mm</span>
                     </div>
                 </div>
@@ -319,17 +334,17 @@
                     </div>
                     <div class="dd-center">
                         <span>长</span>
-                        <input type="text" class="input-text">
+                        <input type="text" class="input-text" maxlength="6" oninput="value=value.replace(/[^\d]/g,'')">
                         <span>mm</span>
                     </div>
                     <div class="dd-center">
                         <span>宽</span>
-                        <input type="text" class="input-text">
+                        <input type="text" class="input-text" maxlength="6" oninput="value=value.replace(/[^\d]/g,'')">
                         <span>mm</span>
                     </div>
                     <div class="dd-center">
                         <span>高</span>
-                        <input type="text" class="input-text">
+                        <input type="text" class="input-text" maxlength="6" oninput="value=value.replace(/[^\d]/g,'')">
                         <span>mm</span>
                     </div>
                 </div>
@@ -406,7 +421,9 @@
             </div>
         </div>
         <div class="andi">
-            北京五一包装科技有限公司Copyright&copy;2015&nbsp;&nbsp;&nbsp;51baozhuang.com015&nbsp;ALL&nbsp;rights&nbsp;reserved.&nbsp;京ic备99999999999-1
+            <div>北京五一包装科技有限公司</div>
+            <div>Copyright&copy;2015&nbsp;&nbsp;&nbsp;51baozhuang.com015&nbsp;ALL&nbsp;rights&nbsp;reserved.&nbsp;</div>
+            <div>京ic备99999999999-1</div>
         </div>
     </footer>
     <script>
@@ -417,7 +434,6 @@
             } else {
                 dd[0].style.display = "none";
             }
-
         }
     </script>
 </body>
