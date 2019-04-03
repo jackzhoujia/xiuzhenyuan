@@ -1,0 +1,10 @@
+
+
+//选项
+//通过启动或禁用可选特性快速修改全局样式。
+$enable-grid-classes:       true !default;
+
+//网格列
+//设置列数,并指定沟槽的宽度
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
