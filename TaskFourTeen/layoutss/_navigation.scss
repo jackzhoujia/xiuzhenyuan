@@ -1,0 +1,40 @@
+.navigation {
+  @extend %flexCol;
+  height: 45vh;
+  background-image: url("../../TaskEight/TaskEightInexSrc/css_sprites.png");
+  background-size: 400vw 45vh;
+  background-position: 0 0;
+  animation: handsome infinite 15s;
+}
+@keyframes handsome {
+  0%,
+  27% {
+    background-position: 0 0;
+  }
+  33%,
+  60% {
+    background-position: -100vw 0;
+  }
+
+  66%,
+  93% {
+    background-position: -200vw 0;
+  }
+  99%,
+  100% {
+    background-position: -300vw 0;
+  }
+}
+.nav-left-img {
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 10vw;
+  border-top: 4px solid $white;
+  border-right: 5px solid $white;
+  transform: rotate(225deg);
+}
+.nav-right-img {
+  @extend .nav-left-img;
+  margin: 0 10vw 0 0;
+  transform: rotate(45deg);
+}

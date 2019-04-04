@@ -1,0 +1,145 @@
+@import "main";
+main {
+  background-color: rgb(250, 250, 250);
+  padding-bottom: $leAndFiWid;
+}
+.main-two {
+  margin: 0 0 0 $leAndFiWid;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  border-top: 1px solid rgba(208, 214, 217, 1);
+  border-bottom: 1px solid rgba(208, 214, 217, 0.3);
+}
+.main-two {
+  li {
+    list-style-type: none;
+    margin-right: 20px;
+    color: rgba(153, 153, 153, 1);
+  }
+}
+.main-two {
+  a {
+    font-size: 7px;
+    text-decoration: none;
+    color: black;
+  }
+}
+.main-two {
+  li:hover {
+    color: white;
+    background-color: rgba(41, 176, 120, 1);
+  }
+}
+.main-three {
+  width: 80vw;
+  margin: 0 0 0 $leAndFiWid;
+  line-height: 100px;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(208, 214, 217, 1);
+}
+.table-one-father {
+  position: relative;
+}
+.table-one {
+  margin-top: $leAndFiWid;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 9px 2px RGBA(8, 1, 3, 0.25);
+}
+.tr-one {
+  display: flex;
+  align-items: center;
+}
+.tr-one img {
+  margin: 10px 0;
+}
+.tr-one div {
+  padding: 0 0 0 10px;
+  font-size: 12px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  word-break: break-all;
+}
+td {
+  padding: 10px 10px;
+  font-size: 10px;
+  color: #999999;
+  font-weight: 500;
+  border-bottom: 1px solid #add9c0;
+}
+.main {
+  padding: 0;
+}
+.main-one {
+  display: flex;
+  padding: 0 $leAndFiWid;
+  line-height: 5vh;
+}
+.main-one span:first-child {
+  font-weight: bold;
+}
+.table-one-father {
+  position: relative;
+}
+/*特效*/
+.hover {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.76);
+  z-index: 1;
+  border-radius: 10px;
+  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+  animation: rotateplane 1.2s infinite ease-in-out;
+  transition: 2s;
+}
+.table-one-father:hover {
+  .hover {
+    visibility: visible;
+    transform: rotateX(360deg);
+  }
+}
+.table-one-father:hover {
+  .X {
+    transform: rotate(360deg);
+  }
+}
+.table-one-father:hover {
+  .Y {
+    transform: rotateY(360deg);
+  }
+}
+.hover {
+  div:first-child {
+    margin: 20% 0 10% 0;
+    color: $white;
+    text-align: center;
+  }
+}
+.hover {
+  div:last-child {
+    margin: 30% 0 0 0;
+    color: $white;
+    width: 70%;
+    margin: auto;
+  }
+}
+.maodian {
+  position: fixed;
+  top: 50%;
+  right: 2%;
+}
+.maodian div:first-child {
+  @include maodian();
+}
+.maodian div:last-child {
+  @include maodian(top);
+}
+.main-four {
+    padding: 0  $leAndFiWid;
+}

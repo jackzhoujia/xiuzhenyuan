@@ -1,0 +1,75 @@
+/*footer*/
+.footer-bottom-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-bottom-center {
+  @extend .footer-bottom-left;
+}
+.footer-bottom-left-top {
+  @include footBottomTestPositon();
+}
+.main-six-end-top {
+  @include footBottomTestPositon();
+}
+.footer-bottom-center-top {
+  @include footBottomTestPositon();
+}
+.footer-bottom-left-end {
+  @include footBottomTestPositon(padding-bottom);
+}
+.footer-bottom-center-end {
+  @include footBottomTestPositon(padding-bottom);
+}
+.footer-bottom-left-a-one,
+.footer-bottom-left-a-two {
+  border-right: 1px solid white;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+.footer-bottom-left a,
+.footer-bottom-left-top,
+.footer-bottom-end-top,
+.footer-bottom-center a {
+  color: white;
+}
+.footer-bottom-left a:hover,
+.footer-bottom-left-top:hover,
+.footer-bottom-end-top:hover,
+.footer-bottom-center a:hover {
+  color: white;
+}
+.footer-bottom-center-end a:first-child,
+.footer-bottom-center a:first-child {
+  @include footBottomTestPositon(padding-right);
+}
+.footer-bottom-end {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.footer-bottom-end-top {
+  @include footBottomTestPositon();
+  @include footBottomTestPositon(padding-bottom);
+}
+
+.footer-bottom-end-end {
+  @include footBottomTestPositon(padding-bottom);
+}
+.andi {
+  display: flex;
+  justify-content: center;
+  line-height: 5vh;
+  background-color: rgb(38, 162, 111);
+  text-align: center;
+  color: white;
+}
+@media screen and (max-width: 992px) {
+    .andi{
+        flex-direction: column;
+    }
+    .footer-bottom-left-end,.footer-bottom-center-center,.footer-bottom-center-end{
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,375 @@
+@charset "UTF-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+form {
+  margin: 0; }
+
+ul,
+ol {
+  padding-left: 0;
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+a img {
+  border: 0; }
+
+img {
+  border: 0; }
+
+*, ::after, ::before {
+  box-sizing: border-box; }
+
+.header-one, .drop, .drop-item, .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.header-nav-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%; }
+
+.col, .col-auto, .col-lg, .col-lg-auto, .col-md, .col-md-auto, .col-sm, .col-sm-auto, .col-xl, .col-xl-auto, .col-1, .col-lg-1, .col-md-1, .col-sm-1, .col-xl-1, .col-2, .col-lg-2, .col-md-2, .col-sm-2, .col-xl-2, .col-3, .col-lg-3, .col-md-3, .col-sm-3, .col-xl-3, .col-4, .col-lg-4, .col-md-4, .col-sm-4, .col-xl-4, .col-5, .col-lg-5, .col-md-5, .col-sm-5, .col-xl-5, .col-6, .col-lg-6, .col-md-6, .col-sm-6, .col-xl-6, .col-7, .col-lg-7, .col-md-7, .col-sm-7, .col-xl-7, .col-8, .col-lg-8, .col-md-8, .col-sm-8, .col-xl-8, .col-9, .col-lg-9, .col-md-9, .col-sm-9, .col-xl-9, .col-10, .col-lg-10, .col-md-10, .col-sm-10, .col-xl-10, .col-11, .col-lg-11, .col-md-11, .col-sm-11, .col-xl-11, .col-12, .col-lg-12, .col-md-12, .col-sm-12, .col-xl-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+/*footer*/
+.footer-bottom-left, .footer-bottom-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.footer-bottom-left-top {
+  padding-top: 30px; }
+
+.main-six-end-top {
+  padding-top: 30px; }
+
+.footer-bottom-center-top {
+  padding-top: 30px; }
+
+.footer-bottom-left-end {
+  padding-bottom: 30px; }
+
+.footer-bottom-center-end {
+  padding-bottom: 30px; }
+
+.footer-bottom-left-a-one,
+.footer-bottom-left-a-two {
+  border-right: 1px solid white;
+  padding-right: 10px;
+  margin-right: 10px; }
+
+.footer-bottom-left a, .footer-bottom-center a,
+.footer-bottom-left-top,
+.footer-bottom-end-top,
+.footer-bottom-center a {
+  color: white; }
+
+.footer-bottom-left a:hover, .footer-bottom-center a:hover,
+.footer-bottom-left-top:hover,
+.footer-bottom-end-top:hover,
+.footer-bottom-center a:hover {
+  color: white; }
+
+.footer-bottom-center-end a:first-child,
+.footer-bottom-center a:first-child {
+  padding-right: 30px; }
+
+.footer-bottom-end {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column; }
+
+.footer-bottom-end-top {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.footer-bottom-end-end {
+  padding-bottom: 30px; }
+
+.andi {
+  display: flex;
+  justify-content: center;
+  line-height: 5vh;
+  background-color: #26a26f;
+  text-align: center;
+  color: white; }
+
+@media screen and (max-width: 992px) {
+  .andi {
+    flex-direction: column; }
+
+  .footer-bottom-left-end, .footer-bottom-center-center, .footer-bottom-center-end {
+    margin-top: 20px; } }
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+
+@media (min-width: 992px) {
+  .col-lg-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; } }
+@media (min-width: 1200px) {
+  .col-xl {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%; }
+
+  .col-xl-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%; } }
+@media (min-width: 992px) {
+  .col-lg {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%; } }
+/*最顶部的客服热线...*/
+/*左边的文字* 这边不用嵌套的原因是因为命名已经狗清楚了再用嵌套的话浪费内存*/
+.header-one-left-test {
+  margin-left: 10vw;
+  font-size: 7px;
+  color: #29b078; }
+
+/*右边的图片*/
+.header-one-right-img {
+  margin-right: 10vw; }
+
+/*导航栏*/
+.header-nav {
+  background-color: #29b078;
+  padding: 0 10vw 0 10vw; }
+
+/*左边的文字*/
+/*左边的文字 上边！*/
+.header-nav-left span:first-child {
+  font-size: 30px;
+  color: white; }
+
+/*左边的文字 下边！*/
+.header-nav-left span:last-child {
+  color: white; }
+
+/*右边的ul*/
+.header-nav-right {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end; }
+
+.header-nav-right li {
+  display: flex; }
+
+.header-nav-right a {
+  padding: 0 20px 0 20px;
+  height: 100px;
+  line-height: 100px;
+  color: white;
+  font-size: 20px; }
+
+.header-nav-right a:hover {
+  text-decoration: none;
+  border-bottom: 4px solid white; }
+
+/*导航栏下拉*/
+.drop-father {
+  display: none; }
+
+.drop {
+  justify-content: flex-end;
+  height: 100px; }
+
+.drop-item {
+  justify-content: center;
+  height: 60px;
+  width: 50px;
+  background-color: #47d197;
+  border-radius: 5px; }
+
+.drop-item div {
+  width: 40px;
+  height: 5px;
+  padding: 10px 0;
+  background-color: #29b078;
+  background-clip: content-box;
+  border-bottom: 5px solid #29b078;
+  border-top: 5px solid #29b078;
+  box-sizing: content-box; }
+
+/*当屏幕小于800px时,一下拉形式呈现导航栏*/
+.drop-down {
+  display: none; }
+
+.drop-down ul {
+  background-color: #29b078; }
+
+.drop-down ul li {
+  list-style-type: none;
+  text-align: center; }
+
+.drop-down a {
+  height: 80px;
+  line-height: 80px;
+  font-size: 18px;
+  color: white; }
+
+.drop-down a:hover {
+  text-decoration: none; }
+
+.drop-down ul li:hover {
+  background-color: rgba(250, 250, 250, 0.1); }
+
+.navigation {
+  height: 45vh;
+  background-image: url("../../TaskEight/TaskEightInexSrc/css_sprites.png");
+  background-size: 400vw 45vh;
+  background-position: 0 0;
+  animation: handsome infinite 15s; }
+
+@keyframes handsome {
+  0%,
+  27% {
+    background-position: 0 0; }
+  33%,
+  60% {
+    background-position: -100vw 0; }
+  66%,
+  93% {
+    background-position: -200vw 0; }
+  99%,
+  100% {
+    background-position: -300vw 0; } }
+.nav-left-img, .nav-right-img {
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 10vw;
+  border-top: 4px solid white;
+  border-right: 5px solid white;
+  transform: rotate(225deg); }
+
+.nav-right-img {
+  margin: 0 10vw 0 0;
+  transform: rotate(45deg); }
+
+.banner {
+  height: 20vh;
+  background: url("../../TaskEight/TaskEightCompangySrc/战略合作企业_02.png") 0/100% 100%; }
+
+main {
+  background-color: #fafafa; }
+
+.main-one {
+  display: flex;
+  padding: 0 10vw;
+  line-height: 5vh; }
+
+.main-one span:first-child {
+  font-weight: bold; }
+
+.main-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  background-clip: content-box;
+  height: 60vh; }
+
+.main-two-left {
+  margin: 0;
+  padding: 0;
+  background-color: white; }
+
+.main-two-left li {
+  margin-bottom: 2vh; }
+
+.main-two-left-title {
+  width: 100%;
+  margin-bottom: 2vh;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 5vh;
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6; }
+
+.main-two-left li span:first-child {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border: 1px solid #ffa625;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%; }
+
+.main-two-left li:hover span:first-child {
+  background-color: #ffa625; }
+
+.main-two-left a {
+  color: #29b078; }
+
+.main-two-left a:hover {
+  text-decoration: none;
+  color: #ffa625; }
+
+.main-two-right-top {
+  display: flex;
+  padding: 2vh   5vw;
+  margin-bottom: 2vh;
+  border-bottom: 1px solid #e6e6e6; }
+
+.main-two-right-top div {
+  padding-left: 5vw;
+  font-size: 7px;
+  font-weight: 400;
+  color: #999999; }
+
+.main-two-right p {
+  text-indent: 2em;
+  font-size: 7px;
+  font-weight: 400;
+  color: #999999;
+  padding: 3vh 5vw; }
+
+/*# sourceMappingURL=company.css.map */

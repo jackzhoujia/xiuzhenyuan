@@ -1,0 +1,28 @@
+//flex布局 横向左中右布局 列项居中
+%flexCol {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+//flex布局 列项居中 列项排版
+%flexRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+//flex布局子元素均匀分摊
+%colXL{
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+%flexGrid{
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}

@@ -1,0 +1,11 @@
+@mixin footBottomTestPositon($a: padding-top) {
+  #{$a}: 30px;
+}
+@mixin maodian ($position:bottom){
+  width: 0;
+  height: 0;
+  border-#{$position}: 10px solid #ccc;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin-bottom: 10px;
+}

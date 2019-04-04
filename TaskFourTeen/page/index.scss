@@ -1,0 +1,167 @@
+@import "main";
+@mixin footFloat($a: left) {
+  display: flex;
+  flex-direction: column;
+  float: $a;
+  margin-#{$a}: 10vw;
+}
+/*屏幕小于992px的时候底部俩块div搞基！*/
+@media screen and (max-width: 992px) {
+  .main-row-five {
+    @include footFloat();
+  }
+  .main-row-five-two {
+    @include footFloat(right);
+  }
+}
+main {
+  background-color: rgb(250, 250, 250);
+}
+.main-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-one-top-img-one {
+  width: 70px;
+  height: 60px;
+  background: url("../../TaskEight/TaskEightInexSrc/rocket.png") no-repeat center center;
+}
+.main-one-top-img-two {
+  @extend .main-one-top-img-one;
+  background: url("../../TaskEight/TaskEightInexSrc/archive.png") no-repeat center center;
+}
+.main-one-top-img-three {
+  @extend .main-one-top-img-one;
+  background: url("../../TaskEight/TaskEightInexSrc/Shape 253.png") no-repeat center center;
+}
+.main-one-center-text {
+  margin: 20px 0;
+  font-size: 9px;
+  font-weight: bold;
+}
+.main-one-bottom-text {
+  font-size: 8px;
+  color: $green;
+  padding-bottom: 50px;
+}
+.main-one-right-text {
+  margin: 20px 0;
+  font-size: 8px;
+  color: $green;
+}
+.main-one-four {
+  justify-content: center;
+  align-items: flex-start;
+}
+.main-one-three {
+  border-right: 1px dashed rgba(222, 222, 222, 1);
+}
+/*标题为如何学习的那一行*/
+.title-one {
+  text-align: center;
+  margin: 60px 0;
+  font-size: 9px;
+  font-weight: bold;
+}
+.main-t {
+  padding: 0 $leAndFiWid;
+  margin: 50px 0 0 0;
+}
+
+.main-two {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+}
+.main-two-square {
+  width: 74px;
+  height: 74px;
+  text-align: center;
+  line-height: 74px;
+  font-size: 15px;
+  color: $green;
+  background: url("../../TaskEight/TaskEightInexSrc/椭圆 8 拷贝.png") no-repeat;
+}
+.main-two-center-text {
+  width: 50%;
+}
+.title-two {
+  text-align: center;
+  margin: 60px 0;
+  font-size: 9px;
+  font-weight: bold;
+}
+/*优秀学员展示那一行*/
+.main-three {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: $white;
+  background-clip: content-box;
+}
+.card-title {
+  margin: 30px 0;
+  font-size: 9px;
+  font-weight: bold;
+}
+.card-text {
+  margin-bottom: 30px;
+  width: 90%;
+  font-size: 8px;
+  color: $green;
+}
+.main-three-one {
+  margin: 20px auto 150px auto;
+  width: 90px;
+  display: flex;
+  text-align: center;
+  box-sizing: content-box;
+}
+/*小圆圈！！*/
+.main-three-one div {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  box-shadow: 0px 1px 2px 0px rgba(8, 1, 3, 0.15);
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.yuan-one,
+.yuan-two,
+.yuan-three {
+  margin: 0 10px 0 0;
+}
+
+.main-four {
+  text-align: center;
+}
+.main-four:hover {
+  box-shadow: 0px 0px 9px 2px RGBA(8, 1, 3, 0.25);
+}
+
+.main-five a {
+  font-size: 7px;
+  font-weight: bold;
+  color: $green;
+  line-height: 30px;
+}
+.main-five a:hover {
+  border-bottom: 1px solid rgba(153, 153, 153, 1);
+}
+/*超链接前面的小圈圈*/
+.main-five span {
+  display: inline-block;
+  margin-right: 5px;
+  width: 5px;
+  height: 5px;
+  background-color: $green;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}

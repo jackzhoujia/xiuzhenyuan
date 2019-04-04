@@ -1,0 +1,128 @@
+/*最顶部的客服热线...*/
+.header-one {
+  @extend %flexCol;
+}
+/*左边的文字* 这边不用嵌套的原因是因为命名已经狗清楚了再用嵌套的话浪费内存*/
+.header-one-left-test {
+  margin-left: $leAndFiWid;
+  font-size: 7px;
+  color: $green;
+}
+/*右边的图片*/
+.header-one-right-img {
+  margin-right: $leAndFiWid;
+}
+/*导航栏*/
+.header-nav {
+  background-color: $green;
+  padding: 0 $leAndFiWid 0 $leAndFiWid;
+}
+/*左边的文字*/
+.header-nav-left {
+  @extend %flexRow;
+}
+/*左边的文字 上边！*/
+.header-nav-left {
+  span:first-child {
+    font-size: 30px;
+    color: $white;
+  }
+}
+/*左边的文字 下边！*/
+.header-nav-left {
+  span:last-child {
+    color: $white;
+  }
+}
+/*右边的ul*/
+.header-nav-right {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.header-nav-right {
+  li {
+    display: flex;
+  }
+}
+.header-nav-right {
+  a {
+    padding: 0 20px 0 20px;
+    height: 100px;
+    line-height: 100px;
+    color: $white;
+    font-size: 20px;
+  }
+}
+.header-nav-right {
+  a:hover {
+    text-decoration: none;
+    border-bottom: 4px solid $white;
+  }
+}
+/*导航栏下拉*/
+.drop-father {
+  display: none;
+}
+.drop {
+  @extend %flexCol;
+  justify-content: flex-end;
+  height: 100px;
+}
+.drop-item {
+  @extend %flexCol;
+  justify-content: center;
+  height: 60px;
+  width: 50px;
+  background-color: rgb(71, 209, 151);
+  border-radius: 5px;
+}
+.drop-item {
+  div {
+    width: 40px;
+    height: 5px;
+    padding: 10px 0;
+    background-color: $green;
+    background-clip: content-box;
+    border-bottom: 5px solid $green;
+    border-top: 5px solid $green;
+    box-sizing: content-box;
+  }
+}
+/*当屏幕小于800px时,一下拉形式呈现导航栏*/
+.drop-down {
+  display: none;
+}
+.drop-down {
+  ul {
+    background-color: $green;
+  }
+}
+.drop-down {
+  ul {
+    li {
+      list-style-type: none;
+      text-align: center;
+    }
+  }
+}
+.drop-down {
+  a {
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    color: $white;
+  }
+}
+.drop-down {
+  a:hover {
+    text-decoration: none;
+  }
+}
+.drop-down {
+  ul {
+    li:hover {
+      background-color: rgba(250, 250, 250, 0.1);
+    }
+  }
+}
