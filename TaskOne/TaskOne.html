@@ -20,31 +20,44 @@
     <div class="box"></div>
     <button onclick="start()">开始闪</button>
     <button onclick="stop()">结束闪</button>
-
     <script>
         var backgroundColor = new Array;//随机数
         var randomNumber = new Array;//随机颜色
-        var box = document.getElementsByClassName("box");
+        var box = document.getElementsByClassName("box");//获取方块元素节点
+        var time;//用于循环与停止循环的变量
+        var buttons;//获取开始按钮的元素节点
         //开始
-        var time;
         function start() {
-            //清除定时器
-            // clearInterval(time);
-           setInterval("showPic()",1000);
-            // document.getElementsByTagName("button")[0].disabled = true;
+            time = setInterval("showPic()", 500);//循环showPic方法并赋值给变量time
+            //设置开始按钮为已点击状态
+            buttons = document.getElementsByTagName("button")[0]
+            buttons.disabled = true;
         }
+        //结束
+        function stop() {
+            initializeColor();//初始化颜色
+            clearInterval(time);//清楚循环
+            buttons.disabled = false;//设置开始按钮为未点击状态
+        }
+        //为随机三个放开各自设置随机颜色
         function showPic() {
-            for (var i = 0; i < 9; i++) {
-                box[i].style.backgroundColor = "rgb(255,166,0)";
-            } 
-            makeColor();
+            initializeColor();//初始化颜色
+            makeColor();//获取存放随机颜色的数组与随机数
+            //设置随机颜色
             for (var i = 0; i < 3; i++) {
                 box[randomNumber[i]].style.backgroundColor = backgroundColor[i];
             }
         }
+        //初始化颜色
+        function initializeColor() {
+            for (var i = 0; i < 9; i++) {
+                box[i].style.backgroundColor = "rgb(255,166,0)";
+            }
+        }
+        //获取随机颜色
         function makeColor() {
-            var Numbers = new Array;//随机颜色
-            var Colors = new Array;
+            var Numbers = new Array;//存放随机数
+            var Colors = new Array;//存放随机颜色
             for (var i = 0; i >= 0; i++) {
                 for (var i = 0; i < 3; i++) {
                     var a = Math.round(Math.random() * 255);
@@ -60,7 +73,7 @@
                     Colors = [];
                 }
             }
-            console.log(backgroundColor);
+            //获取随机数
             for (var i = 0; i >= 0; i++) {
                 for (var i = 0; i < 3; i++) {
                     var Number = Math.round(Math.random() * 8);
@@ -70,11 +83,9 @@
                     randomNumber = Numbers;
                     break;
                 } else {
-                    Numbers = [];  
+                    Numbers = [];
                 }
-
             }
-            console.log(randomNumber);
         }
     </script>
 
