@@ -1,0 +1,116 @@
+body {
+  font-size: initial;
+  margin: 0;
+  background: #eff0f4;
+}
+
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #29bde0;
+  height: 50px;
+}
+.back {
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  border-top: 4px solid #ffffff;
+  border-right: 4px solid #ffffff;
+  transform: rotate(225deg);
+  cursor: pointer;
+}
+
+main {
+  margin: 10px;
+  text-align: center;
+}
+
+h4 {
+  margin-top: 10px;
+  line-height: 40px;
+  background: #ffffff;
+}
+
+.player {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 200px;
+  margin-top: 10px;
+  padding-top: 10px;
+  background: #ffffff;
+}
+
+.player span {
+  font-size: 16px;
+  margin-left: 50px;
+}
+
+.player span input {
+  width: 20px;
+  border: none;
+}
+
+.player span::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin: -10px 0 0 -50px;
+  border-radius: 100%;
+  background: url(../img/pingmin.png) no-repeat center/cover;
+}
+
+.box {
+  height: 40px;
+  margin-top: 10px;
+  background: #ffffff;
+}
+
+.quantity {
+  height: 40px;
+  margin-top: 10px;
+  padding-top: 10px;
+  background: #ffffff;
+}
+
+.quantity input {
+  width: 30px;
+  height: 20px;
+  border: none;
+  background: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  color: #fbb435;
+}
+
+.quantity span {
+  font-size: 15px;
+  color: #fbb435;
+  margin-left: 10px;
+}
+
+footer {
+  margin: 0 10px;
+}
+
+footer button {
+  width: 100%;
+  height: 50px;
+  background: #fbb435;
+  font-size: 15px;
+  letter-spacing: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 0 0 1.5px #fbb435;
+}
