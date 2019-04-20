@@ -38,13 +38,16 @@
 			display: block;
 			clear: both;
 		}
-		#imagegallery{
+
+		#imagegallery {
 			list-style: none;
 		}
-		#imagegallery li{
+
+		#imagegallery li {
 			display: inline;
 		}
-		#imagegallery li a img{
+
+		#imagegallery li a img {
 			border: 0;
 			width: 100px;
 			height: 100px;
@@ -136,14 +139,43 @@
 				}
 			}
 		}
-		var a = new String();
-		console.log(typeof a)
-		a.a= 3;
-		console.log(typeof a)
-		b= a;
-		b = 4; 
-		alert(a);
+		// function changeAgeAndReference(person) {
+		// 	person.age = 25;
+		// 	person = {
+		// 		name: 'John',
+		// 		age: 50
+		// 	};
 
+		// 	return person;
+		// }
+		// var personObj1 = {
+		// 	name: 'Alex',
+		// 	age: 30
+		// };
+		// var personObj2 = changeAgeAndReference(personObj1);
+		// console.log(personObj1); // -> ?
+		// console.log(personObj2); // -> ?
+		var rotate = function (nums, k) {
+			var len = nums.length;
+			var newArr = nums.splice(0, len - k)
+			var temp = nums.concat(newArr)
+			nums = temp
+			return nums;
+		};
+		var a = [1, 2, 3, 4, 5, 6, 7];
+		rotate(a, 3);
+		console.log(a);
+
+
+		var a = [1, 2, 3, 4, 5, 6, 7];
+		var len = a.length;
+		var newArr = a;
+		newArr = newArr.splice(0, lev   n - 3);
+		console.log(a);
+
+		module.exports = {
+			prepareGallery: prepareGallery
+		}
 	</script>
 </body>
 
