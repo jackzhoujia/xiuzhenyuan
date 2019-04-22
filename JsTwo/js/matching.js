@@ -1,13 +1,13 @@
-
 window.onload = mathching;
-var playerElement = document.getElementById("quantity");//获取玩家总数量节点元素
-var killerElement = document.getElementById("killer");//获取杀手节点元素
-var civilianElement = document.getElementById("civilian");//获取平民节点元素
+var playerElement = document.getElementById("quantity"); //获取玩家总数量节点元素
+var killerElement = document.getElementById("killer"); //获取杀手节点元素
+var civilianElement = document.getElementById("civilian"); //获取平民节点元素
 var SZ = new Array;
+
 function mathching() {
     SZ = [];
     var playerTotal = parseInt(playerElement.value);
-    if (playerTotal < 4 || parseInt(playerTotal) > 18) {
+    if (playerTotal < 4 || playerTotal > 18) {
         playerTotal = "";
     }
     var killerTotal = parseInt(Math.floor(playerTotal / 3));
@@ -39,6 +39,3 @@ function shuffle(a) {
     }
     return b;
 }
-
-
-
