@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "AAAA,UACA;EACI,MAAM,EAAE,CAAC",
-"sources": ["TaskThirTeenMadule.scss"],
-"names": [],
-"file": "TaskThirTeenMadule.css"
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,EAAC,IAAI,CACT;EACI,MAAM,EAAE,CAAC;CACZ",
+    "sources": [
+        "TaskThirTeenMadule.scss"
+    ],
+    "names": [],
+    "file": "TaskThirTeenMadule.css"
 }

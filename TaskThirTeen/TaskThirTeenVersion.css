@@ -1,38 +1,50 @@
 body {
   width: 100%;
-  background-color: #f0f0f0; }
+  background-color: #f0f0f0;
+}
 
 .nav {
   position: relative;
   overflow: hidden;
-  background: white; }
+  background: white;
+}
 
 ul {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+}
 
 #menu {
-  display: none; }
+  display: none;
+}
 
 .menu-box {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 65vw;
-  background: #ffffff; }
+  background: #ffffff;
+}
 
 .menu-font {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 50px;
   padding: 5px 0 5px 5px;
   border-bottom: 0.01rem solid #c9c9c9;
   font-size: 15px;
   text-decoration: none;
-  color: #69d1e9; }
+  color: #69d1e9;
+}
 
 .menu-font.menu-font::after {
   content: "";
@@ -41,21 +53,27 @@ ul {
   margin-right: 10px;
   border-top: 5px solid #69d1e9;
   border-right: 5px solid #69d1e9;
-  transform: rotate(45deg); }
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
 
 #menu:checked ~ .main-content {
-  margin-left: 65vw; }
+  margin-left: 65vw;
+}
 
 .main-content {
   position: relative;
   width: 100vw;
   background: #ffffff;
-  transition: all 1s; }
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
 
 header {
   height: 45px;
   width: 100%;
-  background: #29bde0; }
+  background: #29bde0;
+}
 
 header label {
   display: inline-block;
@@ -66,19 +84,22 @@ header label {
   background-color: white;
   border-bottom: 3px solid #ffffff;
   border-top: 3px solid #ffffff;
-  background-clip: content-box; }
+  background-clip: content-box;
+}
 
 .main-top {
   position: relative;
   margin: 55px 18px 14px 18px;
   background-color: white;
-  border: 1px solid #c9c9c9; }
+  border: 1px solid #c9c9c9;
+}
 
 .main-top div:first-child {
   line-height: 58px;
   text-align: center;
   color: #9a9a9a;
-  font-size: 17px; }
+  font-size: 17px;
+}
 
 .main-top div:last-child {
   position: absolute;
@@ -88,22 +109,31 @@ header label {
   width: 10px;
   border-bottom: 2px solid #e7e7e7;
   border-left: 2px solid #e7e7e7;
-  transform: rotate(-135deg); }
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
 
 .main {
   margin: 0 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   background-color: white;
-  border: 1px solid #c9c9c9; }
+  border: 1px solid #c9c9c9;
+}
 
 .main-one {
   padding: 15px 0;
   font-size: 19px;
   color: #fbb435;
   text-align: center;
-  border-bottom: 1px solid #fbb435; }
+  border-bottom: 1px solid #fbb435;
+}
 
 .main-two,
 .main-four,
@@ -114,14 +144,16 @@ header label {
   color: white;
   background-color: #69d1e9;
   border: none;
-  outline: none; }
+  outline: none;
+}
 
 .main-four-img {
   position: absolute;
   right: 5px;
   width: 14px;
   height: 28px;
-  background: url("../TaskSeven/TaskSevenVersionSrc/css_sprites.png")-10px -10px; }
+  background: url("../TaskSeven/TaskSevenVersionSrc/css_sprites.png")-10px-10px;
+}
 
 .main-three,
 .main-five,
@@ -129,11 +161,15 @@ header label {
   margin: 0;
   text-align: center;
   font-size: 12px;
-  color: #787878; }
+  color: #787878;
+}
 
 .main-nine {
   margin: 20px auto 0 auto;
-  display: flex; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
 .main-nine div {
   margin: 0 5px 4px 0;
@@ -142,9 +178,10 @@ header label {
   background-color: #f0f0f0;
   border-radius: 50%;
   -moz-border-radius: 50%;
-  -webkit-border-radius: 50%; }
+  -webkit-border-radius: 50%;
+}
 
 .main-nine div:first-child {
-  background-color: #69d1e9; }
-
+  background-color: #69d1e9;
+}
 /*# sourceMappingURL=TaskThirTeenVersion.css.map */

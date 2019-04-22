@@ -1,26 +1,32 @@
 @charset "UTF-8";
 html, body, button {
-  margin: 0; }
+  margin: 0;
+}
 
 header, footer {
   position: fixed;
-  width: 100%; }
+  width: 100%;
+}
 
 header {
   top: 0;
-  background-color: #5fc0cd; }
+  background-color: #5fc0cd;
+}
 
 .header-left {
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%); }
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
 
 .header-left-img {
   width: 0;
   height: 0;
   border: 10px solid;
   border-color: transparent white transparent transparent;
-  position: relative; }
+  position: relative;
+}
 
 .header-left-img::after {
   content: '';
@@ -28,112 +34,146 @@ header {
   top: -10px;
   left: -5px;
   border: 10px solid;
-  border-color: transparent #5fc0cd transparent transparent; }
+  border-color: transparent #5fc0cd transparent transparent;
+}
 
 .header-center-text {
   color: white;
   font-size: 18px;
   line-height: 44px;
-  text-align: center; }
+  text-align: center;
+}
 
 .main-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 163px;
-  background: url("TaskFiveSrc/图层 2.png") 0/100% 100%; }
+  background: url("TaskFiveSrc/图层 2.png") 0/100% 100%;
+}
 
 .main-1-left-img {
-  margin: 0 15px 0 15px; }
+  margin: 0 15px 0 15px;
+}
 
 .main-1 div div {
-  margin: 5px 0 0 0; }
+  margin: 5px 0 0 0;
+}
 
 .main-1-right-top-text {
   font-size: 18px;
-  color: white; }
+  color: white;
+}
 
 .main-1-right-bottom-text {
   font-size: 12px;
-  color: white; }
+  color: white;
+}
 
 ul {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 li {
   list-style-type: none;
   padding: 20px 0 20px 0;
-  border-bottom: 1px solid #e1e5e7; }
+  border-bottom: 1px solid #e1e5e7;
+}
 
 li span {
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 .li-1-text {
   margin: 0 0 0 10px;
   padding: 0 0 0 10px;
   font-size: 16px;
-  border-left: 2px solid #5FC0CD; }
+  border-left: 2px solid #5FC0CD;
+}
 
 .li-2 {
-  margin: 0 0 0 10px; }
+  margin: 0 0 0 10px;
+}
 
 .li-3 {
-  margin: 0 0 0 10px; }
+  margin: 0 0 0 10px;
+}
 
 .li-4 {
-  margin: 0 0 0 10px; }
+  margin: 0 0 0 10px;
+}
 
 .li-5 {
-  margin: 0 0 0 10px; }
+  margin: 0 0 0 10px;
+}
 
 .li-3-text {
   margin: 0 12px 0 12px;
   padding: 0 12px 0 0;
   color: #999999;
-  border-right: 1px solid #E1E5E7; }
+  border-right: 1px solid #E1E5E7;
+}
 
 .li-4-text {
   margin: 0 12px 0 12px;
   padding: 0 12px 0 0;
   color: #999999;
-  border-right: 1px solid #E1E5E7; }
+  border-right: 1px solid #E1E5E7;
+}
 
 .li-5-text {
   margin: 0 12px 0 12px;
   padding: 0 12px 0 0;
   color: #999999;
-  border-right: 1px solid #E1E5E7; }
+  border-right: 1px solid #E1E5E7;
+}
 
 .li-2-1-text {
   padding: 0 10px 0 0;
   margin: 0 10px 0 0;
-  border-right: 1px solid #E1E5E7; }
+  border-right: 1px solid #E1E5E7;
+}
 
 .li-2 img:first-child {
-  margin: 0 0 0 12px; }
+  margin: 0 0 0 12px;
+}
 
 .li-5-2-text {
-  color: red; }
+  color: red;
+}
 
 .li-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 .li-6-1-text {
-  margin: 0 12px 0 22px; }
+  margin: 0 12px 0 22px;
+}
 
 .li-6-2-text {
-  width: 60%; }
+  width: 60%;
+}
 
 main {
   width: 100%;
   margin: 44px 0 0 0;
   height: 80vh;
-  overflow-y: auto; }
+  overflow-y: auto;
+}
 
 footer {
   bottom: 20px;
-  background-color: white; }
+  background-color: white;
+}
 
 footer button:first-child, footer button:last-child {
   padding: 10px 0;
@@ -141,15 +181,17 @@ footer button:first-child, footer button:last-child {
   border: 1px solid #5fc0cd;
   outline: none;
   border-radius: 5px;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 footer button:first-child {
   margin: 0 3% 0 3%;
   color: #5FC0CD;
-  background-color: white; }
+  background-color: white;
+}
 
 footer button:last-child {
   color: white;
-  background-color: #5fc0cd; }
-
+  background-color: #5fc0cd;
+}
 /*# sourceMappingURL=TaskTwolve.css.map */
