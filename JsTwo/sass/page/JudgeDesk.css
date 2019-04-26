@@ -1,0 +1,201 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+form {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a img {
+  border: 0;
+}
+
+img {
+  border: 0;
+}
+
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.foot-button {
+  width: 100%;
+  height: 50px;
+  background: #fbb435;
+  font-size: 15px;
+  letter-spacing: 10px;
+  color: #ffffff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  border-bottom: solid 1px #74d4eb;
+  z-index: 1;
+}
+
+header .back {
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  cursor: pointer;
+}
+
+header .font {
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 5px;
+}
+
+header .close {
+  display: inline-block;
+  margin-right: 30px;
+  width: 2px;
+  height: 30px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #ffffff;
+}
+
+header .close::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 30px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  background: #ffffff;
+}
+
+header {
+  background-color: #29BDE0;
+}
+
+main {
+  padding: 0 10px;
+}
+
+h4 {
+  border: 1px solid #C9C9C9;
+  margin-top: 60px;
+  text-align: center;
+  line-height: 50px;
+  color: #69D1E9;
+}
+
+ul {
+  position: relative;
+  margin-top: 10px;
+  padding: 40px 0;
+  border: 1px solid #C9C9C9;
+}
+
+.bar {
+  position: absolute;
+  left: 20px;
+  height: 75%;
+  width: 3px;
+  background: #C9C9C9;
+}
+
+.moon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  border: 1px solid #c9c9c9;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.moon img {
+  width: 20px;
+  height: 20px;
+}
+
+.sun {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  border: 1px solid #c9c9c9;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.sun img {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+.step {
+  margin-left: 70px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  letter-spacing: 5px;
+  background: #24A7C6;
+}
+
+.step1 {
+  position: absolute;
+  left: 60px;
+  margin-top: 10px;
+  border-right: 10px solid #24A7C6;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+/*# sourceMappingURL=JudgeDesk.css.map */

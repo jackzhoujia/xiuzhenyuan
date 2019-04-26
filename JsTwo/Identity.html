@@ -5,22 +5,26 @@
     <meta charset="UTF-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="matching.css" rel="stylesheet" type="text/css" />
+    <link href="sass/page/Identity.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <header>
-        <a href="matching.html" class="header-left"></a>
-        <div>投票</div>
-        <div class="header-right">
-            <div></div>
-        </div>
+        <a href="matching.html" class="back" id="backhome"></a>
+        <span class="font">查看身份</span>
+        <div class="close" id="off"></div>
     </header>
     <main>
+        <div id="IdentityNumber"></div>
+        <div>
+            <img id="IdentityAvatar" src="img/block.png">
+            <p id="IdentityStatement"></p>
+        </div>
     </main>
     <footer>
-
+            <button class="foot-button" onclick="aa()"></button>
     </footer>
+    <script type="text/javascript" src="js/Identity.js"></script>
 </body>
 
-</html>
+</html> 

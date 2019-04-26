@@ -1,4 +1,4 @@
-@import "main";
+
 body {
   margin: 0;
   width: 100%;
@@ -140,7 +140,7 @@ header label {
   right: 5px;
   width: 14px;
   height: 28px;
-  background: url("../../img/css_sprites.png")-10px -10px;
+  background: url("../../img/css_sprites.png") -10px -10px;
 }
 
 .main-three,

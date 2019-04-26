@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="sass/page/JudgeDesk.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <a href="JudgeLog.html" class="back" id="backhome"></a>
+        <span class="font">法官台本</span>
+        <div class="close" id="off"></div>
+    </header>
+    <main>
+        <div>
+            <h4>第一天</h4>
+            <ul class="content">
+                <li class="bar">
+                    <span class="moon">
+                        <img src="img/moon.png" alt="">
+                    </span>
+                    <span class="sun">
+                        <img src="img/sun.png" alt="">
+                    </span>
+                </li>
+                <li class="step" id="killer">
+                    <span class="step1"></span>
+                    <span>杀人游戏</span>
+                </li>
+                <li class="step" id="killerSay">
+                    <span class="step1"></span>
+                    <span>亡灵发表遗言</span>
+                </li>
+                <li class="step">
+                    <span class="step1" id="playerSay"></span>
+                    <span>玩家依次发言</span>
+                </li>
+                <li class="step" id="allVote">
+                    <span class="step1"></span>
+                    <span>全民投票</span>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <!-- <button class="foot-button" onclick="aa()">开始游戏</button> -->
+    </footer>
+    <script type="text/javascript" src='javascript-state-machine-master/dist/state-machine.js'></script>
+    <script>
+        //杀人游戏元素节点
+        var killer = document.getElementById("killer");
+        //亡灵发表遗言元素节点
+        var killerSay = document.getElementById("killerSay");
+        //玩家依次发言元素节点
+        var playerSay = document.getElementById("playerSay");
+        //全名投票元素节点
+        var allVote = document.getElementById("allVote");
+
+
+        if (JSON.parse(localStorage.getItem('killer'))) {
+            let killer = JSON.parse(localStorage.getItem('killer'));
+            console.log(killer);
+            killer.style.background = "gray";
+            killer.firstElementChild.style.borderRight = "10px solid gray";
+        }
+        var gameState = new StateMachine({
+            init: 'a',
+            transitions: [{
+                    name: 'one',
+                    from: 'a',
+                    to: 'killer'
+                },
+                {
+                    name: 'two',
+                    from: 'killer',
+                    to: 'killerSay'
+                },
+                {
+                    name: 'three',
+                    from: 'killerSay',
+                    to: 'playerSay'
+                },
+                {
+                    name: 'three',
+                    from: 'playerSay',
+                    to: 'allVote'
+                },
+                {
+                    name: 'reset',
+                    from: '*',
+                    to: 'a'
+                }
+            ],
+        });
+
+        killer.onclick = function () {
+            switch (gameState.state) {
+                case 'a':
+                    gameState.one();
+                    location.href = "JudgeLog.html";
+                    localStorage.setItem("killer", JSON.stringify(killer));
+                    console.log(killer);
+                    break;
+                default:
+                    break;
+            }
+            localStorage.setItem("gameStateDate", gameState.state);
+            console.log(gameState.state);
+        }
+        killerSay.onclick = function () {
+            switch (gameState.state) {
+                case 'killer':
+                    gameState.two();
+                    killerSay.style.background = "gray";
+                    killerSay.firstElementChild.style.borderRight = "10px solid gray";
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,183 +1,152 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-	<style type="text/css">
-		body {
-			font-family: "Helvetica", "Arial", serif;
-			color: #333;
-			background-color: #ccc;
-			margin: 1em 10%;
-		}
-
-		h1 {
-			columns: #333;
-			background-color: transparent;
-		}
-
-		a {
-			color: #c60;
-			background-color: transparent;
-			font-weight: bold;
-			text-decoration: none;
-		}
-
-		ul {
-			padding: 0;
-		}
-
-		li {
-			float: left;
-			padding: 1em;
-			list-style: none;
-		}
-
-		img {
-			display: block;
-			clear: both;
-		}
-
-		#imagegallery {
-			list-style: none;
-		}
-
-		#imagegallery li {
-			display: inline;
-		}
-
-		#imagegallery li a img {
-			border: 0;
-			width: 100px;
-			height: 100px;
-		}
-	</style>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" href="../scss/js-demo.css">
+	<script src="../js/js-demo.js"></script> -->
 </head>
 
 <body>
-	<h1>Snapshots</h1>
-	<ul id="imagegallery">
-		<li>
-			<a href="TestImages/53c73d41t6347a2a44ad5.jpg" title="A firewoks display">
-				<img src="TestImages/53c73d41t6347a2a44ad5.jpg" alt="Fireworks">
-			</a>
-		</li>
-		<li>
-			<a href="TestImages/876591bf226b002640f252e0fecf0275.jpg" title="A cuo of black coffee">
-				<img src="TestImages/876591bf226b002640f252e0fecf0275.jpg" alt="Coffee">
-			</a>
-		</li>
-		<li>
-			<a href="TestImages/Img262780588.jpg" title="A red, red rose">
-				<img src="TestImages/Img262780588.jpg" alt="Rose">
-			</a>
-		</li>
-		<li>
-			<a href="TestImages/U2184P28T3D2092234F326DT20080708102538.jpg" title="The famous clock">
-				<img src="TestImages/U2184P28T3D2092234F326DT20080708102538.jpg" alt="Big Ben">
-			</a>
-		</li>
-	</ul>
-	<img id="placeholder" src="TestImages/U2184P28T3D2092234F326DT20080708102538.jpg" alt="my image gallery">
-	<p id="description">Choose an image.</p>
-	<a href="http://www.example.com/" class="popup">Example</a>
+	<h1 id="dsg">万年单身狗</h1>
+	<button id="sh">送花</button>
+	<button id="bb">表白</button>
+	<button id="qh">求婚</button>
+	<button id="fs">分手</button>
+	<h2>艾克</h2>
+	<p id="jx"></p>
+	<p id="xb"></p>
+	<p id="nl"></p>
+	<script src='JsTwo/javascript-state-machine-master/dist/state-machine.js'> </script>
 	<script>
-
-
-		function prepareGallery() {
-			if (!document.getElementsByTagName) { return false }
-			if (!document.getElementById) { return false }
-			if (!document.getElementById("imagegallery")) { return false }
-			var gallery = document.getElementById("imagegallery");
-			var links = gallery.getElementsByTagName("a");
-			for (var i = 0; i < links.length; i++) {
-				links[i].onclick = function () {
-					return showPic(this) ? false : true;
+		//获取节点
+		var dsg = document.getElementById('dsg'),
+			sh = document.getElementById('sh'),
+			bb = document.getElementById('bb'),
+			qh = document.getElementById('qh'),
+			fs = document.getElementById('fs');
+		var ztj = new StateMachine({
+			// 当前状态
+			init: 'dsgg',
+			// 状态转换
+			transitions: [{
+					name: 'sh1',
+					from: 'dsgg',
+					to: 'hg'
+				},
+				{
+					name: 'sh2',
+					from: 'hg',
+					to: 'py'
+				},
+				{
+					name: 'bb',
+					from: 'py',
+					to: 'nvpy'
+				},
+				{
+					name: 'qh',
+					from: ['hg', 'nvpy'],
+					to: 'jh'
+				},
+				{
+					name: 'fs',
+					from: '*',
+					to: 'dsgg'
+				}
+			],
+			// 点击之后输出的对话框
+			methods: {
+				onEnterDsgg: function () {
+					dsg.innerHTML = '万年单身狗';
+				},
+				onEnterHg: function () {
+					dsg.innerHTML = '朋友还没有到';
+				},
+				onEnterPy: function () {
+					dsg.innerHTML = '炮友';
+				},
+				onEnterNvpy: function () {
+					dsg.innerHTML = '亲密恋人';
+				},
+				onEnterJh: function () {
+					dsg.innerHTML = '结婚';
 				}
 			}
-		}
-		addLoadEvent(prepareGallery);
-		function addLoadEvent(func) {
-			var olaonload = window.onload;
-			if (typeof window.onload != 'function') {
-				window.onload = func;
-			} else {
-				window.onload = function () {
-					olaonload();
-					func();
-				}
+		});
+		sh.onclick = function () {
+			switch (ztj.state) {
+				case 'dsgg':
+					ztj.sh1(); //如果是上面的那个状态的话，就执行了上方的name:sh的代码
+					break;
+				case 'hg':
+					ztj.sh2();
+					break
+				case 'py':
+					alert('滚去表白，屌丝');
+					break;
+				case 'nvpy':
+					alert('滚去结婚吧，傻吊')
+					break;
+				case 'jh':
+					alert('好感+1')
+					break;
 			}
+			console.log(ztj.state);
 		}
-
-		function showPic(whichpic) {
-			if (!document.getElementById("placeholder")) { return false }
-			var source = whichpic.getAttribute("href");
-			var placeholder = document.getElementById("placeholder");
-			if (placeholder.nodeName != "IMG") { return false }
-			placeholder.setAttribute("src", source);
-			if (document.getElementById("description")) {
-				var text = whichpic.getAttribute("title") ? whichpic.getAttribute("title") : "";
-				var description = document.getElementById("description");
-				if (description.firstChild.nodeType == 3) {
-					description.firstChild.nodeValue = text;
-				}
+		bb.onclick = function () {
+			switch (ztj.state) {
+				case 'dsgg':
+					alert('你要先送花');
+					break;
+				case 'hg':
+					alert("连炮友都不是，还想表白");
+					break;
+				case 'py':
+					ztj.bb();
+					break;
+				case 'jh':
+					alert("已经结婚就不要秀恩爱了");
+					break;
+					// 以上状态都不存在时候执行的代码
+				default:
+					alert("尝试着送花或者求婚吧");
 			}
-			return true;
+			console.log(ztj.state);
 		}
-
-
-		function popUp(winURL) {
-			window.open(winURL, "popup", "width:320,height:480");
-		}
-		var links = document.getElementsByTagName("a");
-		for (var i = 0; i < links.length; i++) {
-			if (links[i].getAttribute("class") == "popup") {
-				links[i].onclick = function () {
-					popUp(this.getAttribute("href"));
-					return false;
-				}
+		qh.onclick = function () {
+			switch (ztj.state) {
+				case 'dsgg':
+					alert("先送花建立友情吧");
+					break
+				case 'hg':
+					alert('你要先建立关系');
+					break;
+				case 'nvpy':
+					ztj.qh();
+					break;
+				case 'py':
+					alert('去表白');
+					break;
+				default:
+					alert("不要在求婚了");
 			}
+			console.log(ztj.state);
 		}
-		// function changeAgeAndReference(person) {
-		// 	person.age = 25;
-		// 	person = {
-		// 		name: 'John',
-		// 		age: 50
-		// 	};
-
-		// 	return person;
-		// }
-		// var personObj1 = {
-		// 	name: 'Alex',
-		// 	age: 30
-		// };
-		// var personObj2 = changeAgeAndReference(personObj1);
-		// console.log(personObj1); // -> ?
-		// console.log(personObj2); // -> ?
-		var rotate = function (nums, k) {
-			var len = nums.length;
-			var newArr = nums.splice(0, len - k)
-			var temp = nums.concat(newArr)
-			nums = temp
-			return nums;
-		};
-		var a = [1, 2, 3, 4, 5, 6, 7];
-		rotate(a, 3);
-		console.log(a);
-
-
-		var a = [1, 2, 3, 4, 5, 6, 7];
-		var len = a.length;
-		var newArr = a;
-		newArr = newArr.splice(0, lev   n - 3);
-		console.log(a);
-
-		module.exports = {
-			prepareGallery: prepareGallery
+		fs.onclick = function () {
+			switch (ztj.state) {
+				case 'dsgg':
+					alert("(o゜▽゜)o☆单身狗不需要分手");
+					break;
+				default:
+					ztj.fs();
+			}
 		}
 	</script>
+
 </body>
 
 </html>
-<!-- test vs code git git git -->

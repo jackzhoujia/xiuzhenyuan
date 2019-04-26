@@ -1,0 +1,45 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-bottom: solid 1px #74d4eb;
+    z-index: 1;
+
+    .back {
+        width: 15px;
+        height: 15px;
+        margin-left: 20px;
+        border-top: 3px solid #ffffff;
+        border-right: 3px solid #ffffff;
+        transform: rotate(225deg);
+        cursor: pointer;
+    }
+
+    .font {
+        font-size: 20px;
+        color: #ffffff;
+        letter-spacing: 5px;
+    }
+
+    .close {
+        display: inline-block;
+        margin-right: 30px;
+        width: 2px;
+        height: 30px;
+        transform: rotate(45deg);
+        background: #ffffff;
+    }
+    .close::after{
+        content: "";
+        display: block;
+        width: 2px;
+        height: 30px;
+        transform: rotate(-90deg);
+        background: #ffffff;
+    }
+}

@@ -1,0 +1,190 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+form {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a img {
+  border: 0;
+}
+
+img {
+  border: 0;
+}
+
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.foot-button {
+  width: 100%;
+  height: 50px;
+  background: #fbb435;
+  font-size: 15px;
+  letter-spacing: 10px;
+  color: #ffffff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  border-bottom: solid 1px #74d4eb;
+  z-index: 1;
+}
+
+header .back {
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  cursor: pointer;
+}
+
+header .font {
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 5px;
+}
+
+header .close {
+  display: inline-block;
+  margin-right: 30px;
+  width: 2px;
+  height: 30px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #ffffff;
+}
+
+header .close::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 30px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  background: #ffffff;
+}
+
+body {
+  background: #29BDE0;
+}
+
+main {
+  margin-top: 70px;
+}
+
+.main-one {
+  background-color: #b9e9f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 41px;
+  width: 100%;
+}
+
+.main-one div:first-child {
+  font-size: 13px;
+  margin-left: 23px;
+}
+
+.main-three {
+  margin-left: 24px;
+  margin-top: -7px;
+  margin-bottom: 24px;
+  color: white;
+  font-size: 13px;
+}
+
+.mainOne {
+  position: relative;
+  float: left;
+  width: 30%;
+  margin: 2.5% 0 30px 2.5%;
+  border: 1vw solid white;
+  position: relative;
+}
+
+.boxO {
+  text-align: center;
+  padding: 8vw 0;
+  color: #565656;
+  font-size: 3vw;
+  background-color: #F5C97B;
+}
+
+.boxT {
+  font-size: 3vw;
+  color: white;
+  background-color: #83b09a;
+  text-align: center;
+}
+
+.drop-down {
+  width: 100%;
+  position: absolute;
+  top: 115%;
+}
+
+.drop-downO {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.drop-downSrcO {
+  width: 4.5vw;
+  height: 4.5vw;
+  background: url("../../../TaskSeven/TaskSevenVoteSrc/css_sprites (1).png") no-repeat 18.182% 18.182%/460%;
+}
+
+footer {
+  margin-left: 10%;
+  position: fixed;
+  bottom: 20px;
+  width: 80%;
+}
+/*# sourceMappingURL=JudgeLog.css.map */

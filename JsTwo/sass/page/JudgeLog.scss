@@ -1,0 +1,76 @@
+@import "main";
+
+
+
+body {
+    background: #29BDE0;
+}
+
+main {
+    margin-top: 70px;
+}
+
+.main-one {
+    background-color: rgb(185, 233, 245);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 41px;
+    width: 100%;
+}
+.main-one div:first-child {
+    font-size: 13px;
+    margin-left: 23px;
+}
+
+.main-three {
+    margin-left: 24px;
+    margin-top: -7px;
+    margin-bottom: 24px;
+    color: white;
+    font-size: 13px;
+}
+
+.mainOne {
+    position: relative;
+    float: left;
+    width: 30%;
+    margin: 2.5% 0 30px 2.5%;
+    border: 1vw solid white;
+    position: relative;
+}
+
+.boxO {
+    text-align: center;
+    padding: 8vw 0;
+    color: #565656;
+    font-size: 3vw;
+    background-color: #F5C97B;
+}
+
+.boxT {
+    font-size: 3vw;
+    color: white;
+    background-color: rgb(131, 176, 154);
+    text-align: center;
+}
+.drop-down{
+    width: 100%;
+    position: absolute;
+    top: 115%;
+}
+.drop-downO{
+    display: flex;
+    justify-content: center;
+}
+.drop-downSrcO{
+    width: 4.5vw;
+    height: 4.5vw;
+    background: url("../../../TaskSeven/TaskSevenVoteSrc/css_sprites (1).png") no-repeat 18.182% 18.182% /460%;
+}
+footer {
+    margin-left: 10%;
+    position: fixed;
+    bottom: 20px;
+    width: 80%;
+}
