@@ -6,8 +6,16 @@ body {
     background: #29BDE0;
 }
 
+header {
+    background: #29BDE0;
+}
+
 main {
-    margin-top: 70px;
+    float: left;
+    width: 100%;
+    overflow-y: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .main-one {
@@ -18,6 +26,7 @@ main {
     height: 41px;
     width: 100%;
 }
+
 .main-one div:first-child {
     font-size: 13px;
     margin-left: 23px;
@@ -54,23 +63,32 @@ main {
     background-color: rgb(131, 176, 154);
     text-align: center;
 }
-.drop-down{
+
+.drop-down {
     width: 100%;
     position: absolute;
     top: 115%;
 }
-.drop-downO{
+
+.drop-downO {
     display: flex;
     justify-content: center;
 }
-.drop-downSrcO{
+
+.drop-downSrcO {
     width: 4.5vw;
     height: 4.5vw;
     background: url("../../../TaskSeven/TaskSevenVoteSrc/css_sprites (1).png") no-repeat 18.182% 18.182% /460%;
 }
+
 footer {
-    margin-left: 10%;
+    background: #29BDE0;
+    z-index: 10;
     position: fixed;
-    bottom: 20px;
-    width: 80%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
 }

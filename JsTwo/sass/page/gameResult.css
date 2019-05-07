@@ -1,0 +1,158 @@
+html, body {
+  margin: 0;
+}
+
+header {
+  background-color: #29BDE0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.headO {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.headOTest {
+  color: white;
+  font-size: 17px;
+}
+
+.headT {
+  width: 176px;
+  height: 103px;
+  background-image: url("../../../TaskSeven/TaskSevenResultSrc/css_sprites.png");
+  background-position: -10px -10px;
+  margin: 10px auto;
+}
+
+.headT div:first-child {
+  width: 43px;
+  height: 42px;
+  background-image: url("../../../TaskSeven/TaskSevenResultSrc/css_sprites.png");
+  background-position: -10px -133px;
+  margin: auto;
+}
+
+.headT div:last-child {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin-top: 23px;
+}
+
+.headTh {
+  color: #FFC865;
+  font-size: 17px;
+  width: 75%;
+  margin: 0 auto 30px auto;
+  font-weight: normal;
+  line-height: 21px;
+  letter-spacing: 1px;
+}
+
+.headF {
+  font-size: 13px;
+  line-height: 17px;
+  color: white;
+  width: 75%;
+  margin: 0 auto 0 auto;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.main div:first-child {
+  width: 75%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main div:first-child span:first-child {
+  color: #515151;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.main div:first-child span:last-child {
+  color: #C7C7C7;
+  font-size: 10px;
+}
+
+.main div:last-child {
+  width: 75%;
+  margin: 10px auto 10px auto;
+  color: #A6A6A6;
+  font-size: 13px;
+}
+
+.main {
+  margin-top: 5px;
+  border-bottom: 2px solid #dddddd;
+}
+
+main {
+  width: 100%;
+  margin: 250px 0 68px 0;
+  /*    height: 40vh;*/
+  overflow-y: auto;
+}
+
+footer {
+  height: 65px;
+  background-color: rgba(153, 223, 240, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+footer button:first-child {
+  background-color: #F66F6F;
+  width: 136px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+footer button:last-child {
+  background-color: #FBB435;
+  width: 136px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+/*# sourceMappingURL=gameResult.css.map */

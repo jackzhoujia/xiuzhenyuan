@@ -22,7 +22,8 @@ header {
 }
 
 main {
-  margin: 10px;
+  margin: 70px 0 0 0 ;
+  padding: 0 10px;
   text-align: center;
 }
 
@@ -35,7 +36,7 @@ h4 {
 .player {
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
   height: 200px;
   margin-top: 10px;
   padding-top: 10px;
@@ -92,5 +93,7 @@ h4 {
 }
 
 footer {
-  margin: 0 10px;
+  margin: 20px 10px;
+  display: flex;
+  justify-content: center;
 }

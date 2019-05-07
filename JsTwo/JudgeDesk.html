@@ -5,18 +5,23 @@
     <meta charset="UTF-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <link href="sass/page/JudgeDesk.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <header>
-        <a href="JudgeLog.html" class="back" id="backhome"></a>
+        <a class="back" id="backhome"></a>
         <span class="font">法官台本</span>
         <div class="close" id="off"></div>
     </header>
     <main>
-        <div>
-            <h4>第一天</h4>
+        <div class="main">
+            <h4>
+                <span></span>
+                <span class="text">第一天</span>
+                <span class="xiala"></span>
+            </h4>
             <ul class="content">
                 <li class="bar">
                     <span class="moon">
@@ -26,101 +31,347 @@
                         <img src="img/sun.png" alt="">
                     </span>
                 </li>
-                <li class="step" id="killer">
+                <li class="step killer">
                     <span class="step1"></span>
                     <span>杀人游戏</span>
                 </li>
-                <li class="step" id="killerSay">
+                <li class="title" style="text-align:center;margin:10px 0 10px 0;display: none;">
+
+                </li>
+                <li class="step killerSay">
                     <span class="step1"></span>
                     <span>亡灵发表遗言</span>
                 </li>
-                <li class="step">
-                    <span class="step1" id="playerSay"></span>
+                <li class="step playerSay">
+                    <span class="step1"></span>
                     <span>玩家依次发言</span>
                 </li>
-                <li class="step" id="allVote">
+                <li class="step allVote">
                     <span class="step1"></span>
                     <span>全民投票</span>
+                </li>
+                <li class="title" style="text-align:center;margin:10px 0 10px 0;display: none;">
                 </li>
             </ul>
         </div>
     </main>
     <footer>
-        <!-- <button class="foot-button" onclick="aa()">开始游戏</button> -->
+        <button class="buttonOne">结束游戏</button>
+        <button class="buttonTwo">法官日志</button>
     </footer>
     <script type="text/javascript" src='javascript-state-machine-master/dist/state-machine.js'></script>
     <script>
-        //杀人游戏元素节点
-        var killer = document.getElementById("killer");
-        //亡灵发表遗言元素节点
-        var killerSay = document.getElementById("killerSay");
-        //玩家依次发言元素节点
-        var playerSay = document.getElementById("playerSay");
-        //全名投票元素节点
-        var allVote = document.getElementById("allVote");
-
-
-        if (JSON.parse(localStorage.getItem('killer'))) {
-            let killer = JSON.parse(localStorage.getItem('killer'));
-            console.log(killer);
-            killer.style.background = "gray";
-            killer.firstElementChild.style.borderRight = "10px solid gray";
-        }
-        var gameState = new StateMachine({
-            init: 'a',
-            transitions: [{
-                    name: 'one',
-                    from: 'a',
-                    to: 'killer'
-                },
-                {
-                    name: 'two',
-                    from: 'killer',
-                    to: 'killerSay'
-                },
-                {
-                    name: 'three',
-                    from: 'killerSay',
-                    to: 'playerSay'
-                },
-                {
-                    name: 'three',
-                    from: 'playerSay',
-                    to: 'allVote'
-                },
-                {
-                    name: 'reset',
-                    from: '*',
-                    to: 'a'
+        $(function () {
+            $(".back").click(function () {
+                var backScore = 1;
+                localStorage.setItem("backScore", JSON.stringify(backScore));
+                location.href = "JudgeLog.html";
+            });
+            $(".buttonTwo").click(function () {
+                var backScore = 1;
+                localStorage.setItem("backScore", JSON.stringify(backScore));
+                location.href = "JudgeLog.html";
+            });
+            $(".close").click(function () {
+                var r = confirm("确定退出游戏吗？");
+                if (r == true) {
+                    location.href = "gameResult.html";
+                } else {
+                    return;
                 }
-            ],
-        });
+            });
+            $(".buttonOne").click(function () {
+                var r = confirm("确定退出游戏吗？");
+                if (r == true) {
+                    location.href = "gameResult.html";
+                } else {
+                    return;
+                }
+            });
+            //获取杀人时保存的死亡玩家数组
+            var ii = JSON.parse(localStorage.getItem('ii'));
+            console.log(ii);
+            //获取发牌时保存的所有玩家数组
+            var SZ = JSON.parse(localStorage.getItem('key'));
+            console.log(SZ);
+            //获取发牌时保存的杀手数组
+            var SS = JSON.parse(localStorage.getItem('SS'));
+            console.log(SS);
+            //获取发牌时保存的平民数组
+            var PM = JSON.parse(localStorage.getItem('PM'));
+            console.log(PM);
+            //获取法官台本状态机状态
+            var gameStateDate = localStorage.getItem('gameStateDate');
+            console.log(gameStateDate);
+            var Main = $("main");
+            var main = $(".main");
 
-        killer.onclick = function () {
-            switch (gameState.state) {
-                case 'a':
-                    gameState.one();
-                    location.href = "JudgeLog.html";
-                    localStorage.setItem("killer", JSON.stringify(killer));
-                    console.log(killer);
-                    break;
-                default:
-                    break;
+            var aa = JSON.parse(localStorage.getItem('aa'));
+            var bb = JSON.parse(localStorage.getItem('bb'));
+            var cc = JSON.parse(localStorage.getItem('cc'));
+            var dd = JSON.parse(localStorage.getItem('dd'));
+
+            var chnNumChar = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+            for (let i = 0; i < SZ.length - 1; i++) {
+                var cloneElement = main.eq(0).clone(true);
+                Main.append(cloneElement);
+                var h4 = $("h4");
+                h4.eq(i + 1).children(".text").text("第" + chnNumChar[i + 1] + "天");
+                var main = $(".main");
+                main.eq(i + 1).css({
+                    "display": "none"
+                });
             }
-            localStorage.setItem("gameStateDate", gameState.state);
-            console.log(gameState.state);
-        }
-        killerSay.onclick = function () {
-            switch (gameState.state) {
-                case 'killer':
-                    gameState.two();
-                    killerSay.style.background = "gray";
-                    killerSay.firstElementChild.style.borderRight = "10px solid gray";
-                    break;
-                default:
-                    break;
+            for (let i = 0; i < SZ.length; i++) {
+                var h4 = $("h4");
+                var content = $("ul");
+                h4.eq(i).click(function () {
+                    if (content.eq(i).css("display") == "none") {
+                        content.eq(i).css({
+                            "display": "block"
+                        });
+                    } else {
+                        content.eq(i).css({
+                            "display": "none"
+                        });
+                    }
+                });
             }
-        }
+            var gameState = new StateMachine({
+                init: gameStateDate || 'a',
+                transitions: [{
+                        name: 'one',
+                        from: 'a',
+                        to: 'killer'
+                    },
+                    {
+                        name: 'two',
+                        from: 'killer',
+                        to: 'killerSay'
+                    },
+                    {
+                        name: 'three',
+                        from: 'killerSay',
+                        to: 'playerSay'
+                    },
+                    {
+                        name: 'four',
+                        from: 'playerSay',
+                        to: 'allVote'
+                    },
+                    {
+                        name: 'reset',
+                        from: '*',
+                        to: 'a'
+                    }
+                ],
+            });
+
+            if (ii) {
+                for (let i = 0; i < ii.length; i++) {
+                    var title = $(".title").eq(i);
+                    if (i % 2 == 0 || i == 0) {
+                        title.text("晚上:" + (ii[i] + 1) + "被杀手杀死," + (ii[i] + 1) + "号是" + SZ[ii[i]]);
+                        title.css({
+                            "display": "block"
+                        });
+                    } else {
+                        title.text("白天:" + (ii[i] + 1) + "被全民投票投死," + (ii[i] + 1) + "号是" + SZ[ii[i]]);
+                        title.css({
+                            "display": "block"
+                        });
+                    }
+                }
+            }
+
+            for (let i = 0; i < main.length; i++) {
+                var killer = $(".killer").eq(i);
+                killer.click(function () {
+                    switch (gameState.state) {
+                        case 'a':
+                            gameState.one();
+                            location.href = "JudgeLog.html";
+                            if (!aa) {
+                                aa = [];
+                            }
+                            aa.push(i);
+                            localStorage.setItem("aa", JSON.stringify(aa));
+                            localStorage.setItem("gameStateDate", gameState.state);
+                            break;
+                        case 'killer':
+                            alert("请点击亡灵发表遗言！！");
+                            break;
+                        case 'killerSay':
+                            alert("请点击玩家依次发言！！");
+                            break;
+                        case 'playerSay':
+                            alert("请点击全民投票");
+                            break;
+                        default:
+                            break;
+                    }
+                });
+                var killerSay = $(".killerSay").eq(i);
+                killerSay.click(function () {
+                    switch (gameState.state) {
+                        case 'killer':
+                            gameState.two();
+                            var killerSay = $(".killerSay").eq(i);
+                            killerSay.css({
+                                "background": "gray"
+                            });
+                            var step = killerSay.children(".step1");
+                            step.css({
+                                "border-right": "10px solid gray"
+                            });
+                            alert("请亡灵发表遗言！！！");
+                            if (!bb) {
+                                bb = [];
+                            }
+                            bb.push(i);
+                            localStorage.setItem("bb", JSON.stringify(bb));
+                            localStorage.setItem("gameStateDate", gameState.state);
+                            break;
+                        case 'killerSay':
+                            alert("请点击玩家依次发言！！");
+                            break;
+                        case 'playerSay':
+                            alert("请点击全民投票");
+                            break;
+                        case 'a':
+                            alert("麻烦按流程走！！");
+                            break;
+                        default:
+                            break;
+                    }
+                });
+                var playerSay = $(".playerSay").eq(i);
+                playerSay.click(function () {
+                    switch (gameState.state) {
+                        case 'killerSay':
+                            gameState.three();
+                            alert("玩家请依次发言！！！");
+                            var playerSay = $(".playerSay").eq(i);
+                            playerSay.css({
+                                "background": "gray"
+                            });
+                            var step = playerSay.children(".step1");
+                            step.css({
+                                "border-right": "10px solid gray"
+                            });
+                            if (!cc) {
+                                cc = [];
+                            }
+                            cc.push(i);
+                            localStorage.setItem("cc", JSON.stringify(cc));
+                            localStorage.setItem("gameStateDate", gameState.state);
+                            break;
+                        case 'playerSay':
+                            alert("请点击全民投票");
+                            break;
+                        case 'a':
+                            alert("请按流程走！！");
+                            break;
+                        case 'killer':
+                            alert("请按流程走");
+                            break;
+                        default:
+                            break;
+                    }
+                });
+                var allVote = $(".allVote").eq(i);
+                allVote.click(function () {
+                    switch (gameState.state) {
+                        case 'playerSay':
+                            gameState.reset();
+                            location.href = "JudgeLog.html";
+                            if (!dd) {
+                                dd = [];
+                            }
+                            dd.push(i);
+                            localStorage.setItem("dd", JSON.stringify(dd));
+                            localStorage.setItem("gameStateDate", gameState.state);
+                            break;
+                        case 'a':
+                            alert("请按流程走！！");
+                            break;
+                        case 'killer':
+                            alert("请按流程走");
+                            break;
+                        case 'killerSay':
+                            alert("请按流程走");
+                            break;
+                        default:
+                            break;
+                    }
+                });
+            }
+            if (aa) {
+                for (let i = 0; i < aa.length; i++) {
+                    //杀人游戏元素节点
+                    var killer = $(".killer").eq(i);
+                    killer.css({
+                        "background": "gray"
+                    });
+                    var step = killer.children(".step1");
+                    step.css({
+                        "border-right": "10px solid gray"
+                    });
+                }
+            }
+            if (bb) {
+                for (let i = 0; i < bb.length; i++) {
+                    //亡灵发表遗言元素节点
+                    var killerSay = $(".killerSay").eq(i);
+                    killerSay.css({
+                        "background": "gray"
+                    });
+                    var step = killerSay.children(".step1");
+                    step.css({
+                        "border-right": "10px solid gray"
+                    });
+                }
+            }
+            if (cc) {
+                for (let i = 0; i < bb.length; i++) {
+                    //玩家依次发言元素节点
+                    var playerSay = $(".playerSay").eq(i);
+                    playerSay.css({
+                        "background": "gray"
+                    });
+                    var step = playerSay.children(".step1");
+                    step.css({
+                        "border-right": "10px solid gray"
+                    });
+                }
+            }
+            if (dd) {
+                for (let i = 0; i < bb.length; i++) {
+                    //全名投票元素节点
+                    var allVote = $(".allVote").eq(i);
+                    allVote.css({
+                        "background": "gray"
+                    });
+                    var step = allVote.children(".step1");
+                    step.css({
+                        "border-right": "10px solid gray"
+                    });
+                    content.eq(i).css({
+                        "display": "none"
+                    });
+                    // content.eq(i).css({
+                    //     "pointer-events": "none"
+                    // });
+                    content.eq(i).children(".step").unbind('click');
+                    content.eq(i).children(".step").click(function () {
+                        alert("此条操作已经操作过,请点击下一天的操作！！！");
+                    });
+                    main.eq(i + 1).css({
+                        "display": "block"
+                    });
+                }
+            }
+        });
     </script>
 
 </body>

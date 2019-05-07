@@ -36,7 +36,7 @@ img {
 }
 
 .foot-button {
-  width: 100%;
+  width: 80%;
   height: 50px;
   background: #fbb435;
   font-size: 15px;
@@ -106,14 +106,36 @@ header {
 
 main {
   padding: 0 10px;
+  margin-top: 60px;
 }
 
 h4 {
   border: 1px solid #C9C9C9;
-  margin-top: 60px;
+  margin-top: 10px;
   text-align: center;
   line-height: 50px;
   color: #69D1E9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.xiala {
+  content: "";
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin-right: 10px;
+  border-bottom: 4px solid #69D1E9;
+  border-right: 4px solid #69D1E9;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 ul {
@@ -197,5 +219,32 @@ ul {
   border-right: 10px solid #24A7C6;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  background: rgba(36, 167, 198, 0.2);
+  z-index: 2;
+  height: 50px;
+  width: 100%;
+}
+
+footer button {
+  width: 45%;
+  height: 80%;
+  font-size: .3rem;
+  border-radius: .1rem;
+  outline: none;
+  background: orange;
+  color: #fff;
 }
 /*# sourceMappingURL=JudgeDesk.css.map */

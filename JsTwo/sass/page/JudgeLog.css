@@ -36,7 +36,7 @@ img {
 }
 
 .foot-button {
-  width: 100%;
+  width: 80%;
   height: 50px;
   background: #fbb435;
   font-size: 15px;
@@ -104,8 +104,16 @@ body {
   background: #29BDE0;
 }
 
+header {
+  background: #29BDE0;
+}
+
 main {
-  margin-top: 70px;
+  float: left;
+  width: 100%;
+  overflow-y: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 .main-one {
@@ -182,9 +190,20 @@ main {
 }
 
 footer {
-  margin-left: 10%;
+  background: #29BDE0;
+  z-index: 10;
   position: fixed;
-  bottom: 20px;
-  width: 80%;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  width: 100%;
 }
 /*# sourceMappingURL=JudgeLog.css.map */
