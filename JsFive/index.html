@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <form id="login">
+        <input placeholder="用户名" name="name" type="text">
+        <input placeholder="密码" name="pwd" type="password">
+        <p id="msg"></p>
+        <button id="btn" type="submit">登录</button>
+    </form>
+    <script type="text/javascript">
+        //原生
+        // var oForm = document.getElementById('login');
+        // var oMsg = document.getElementById('msg');
+        // var oBtn = document.getElementById('btn');
+        // oBtn.onclick = function () {
+        //     var data = new FormData(oForm);
+        //     console.log(data);
+        //     var oAjax = new XMLHttpRequest();
+        //     oAjax.onreadystatechange = function () {
+        //         if (oAjax.readyState == 4 && oAjax.status == 200) {
+        //             var resdata = JSON.parse(oAjax.responseText);
+        //             console.log(resdata);
+        //             if (resdata.code === 0) {
+        //                 window.location.href = "http://dev.admin.carrots.ptteng.com/";
+        //             } else {
+        //                 oMsg.innerHTML = resdata.message;
+        //                 timer = setTimeout(function () {
+        //                     oMsg.innerHTML = '';
+        //                 }, 3000)
+        //             }
+        //         }
+        //     }
+        //     oAjax.open('POST', '/carrots-admin-ajax/a/login', true);
+        //     oAjax.send(data);
+        //     return false;
+        // }
+        //jquery
+        $("form").on("submit", function () {
+            $.ajax({
+                type: 'POST',
+                url: '/carrots-admin-ajax/a/login',
+                data: $('#login').serialize(),
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                    if (data.code === 0) {
+                        window.location.href = "http://dev.admin.carrots.ptteng.com/";
+                    } else {
+                        var msg = $('#msg');
+                        msg.text(data.message);
+                        timer = setTimeout(function () {
+                            msg.text = '';
+                        }, 3000)
+                    }
+                }
+            });
+            return false;
+        });
+    </script>
+</body>
+
+</html>

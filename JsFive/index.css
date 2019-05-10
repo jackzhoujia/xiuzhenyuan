@@ -1,0 +1,45 @@
+body {
+    background-image: url(wallhaven-763073_1600x900.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#login {
+    width: 50%;
+    margin: 10% auto;
+    padding: 10px;
+    border-radius: 6px;
+    background: #edeff1;
+}
+
+#login input,
+#btn {
+    display: block;
+    border: none;
+    width: 90%;
+    margin: 5%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#login input:focus {
+    outline-color: #1abc9c;
+}
+
+#btn {
+    background: #1abc9c;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#btn:focus {
+    outline-color: #16a085;
+    border-radius: 4px;
+}
+
+#msg {
+    text-align: center;
+    color: red;
+}
