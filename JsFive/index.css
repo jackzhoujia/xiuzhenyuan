@@ -1,12 +1,18 @@
-body {
-    background-image: url(wallhaven-763073_1600x900.png);
-    background-repeat: no-repeat;
-    background-size:100% 100%;
+html,body{
+    margin: 0;
+   padding: 0;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(wallhaven-763073_1600x900.png) no-repeat center/cover;
+    height: 100vh;
 }
 
 #login {
-    width: 50%;
-    margin: 10% auto;
+    width: 40%;
     padding: 10px;
     border-radius: 6px;
     background: #edeff1;
