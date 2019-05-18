@@ -4,149 +4,118 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
 	<title>Document</title>
-	<!-- <link rel="stylesheet" href="../scss/js-demo.css">
-	<script src="../js/js-demo.js"></script> -->
 </head>
 
 <body>
-	<h1 id="dsg">万年单身狗</h1>
-	<button id="sh">送花</button>
-	<button id="bb">表白</button>
-	<button id="qh">求婚</button>
-	<button id="fs">分手</button>
-	<h2>艾克</h2>
-	<p id="jx"></p>
-	<p id="xb"></p>
-	<p id="nl"></p>
-	<script src='JsTwo/javascript-state-machine-master/dist/state-machine.js'> </script>
-	<script>
-		//获取节点
-		var dsg = document.getElementById('dsg'),
-			sh = document.getElementById('sh'),
-			bb = document.getElementById('bb'),
-			qh = document.getElementById('qh'),
-			fs = document.getElementById('fs');
-		var ztj = new StateMachine({
-			// 当前状态
-			init: 'dsgg',
-			// 状态转换
-			transitions: [{
-					name: 'sh1',
-					from: 'dsgg',
-					to: 'hg'
-				},
-				{
-					name: 'sh2',
-					from: 'hg',
-					to: 'py'
-				},
-				{
-					name: 'bb',
-					from: 'py',
-					to: 'nvpy'
-				},
-				{
-					name: 'qh',
-					from: ['hg', 'nvpy'],
-					to: 'jh'
-				},
-				{
-					name: 'fs',
-					from: '*',
-					to: 'dsgg'
-				}
-			],
-			// 点击之后输出的对话框
-			methods: {
-				onEnterDsgg: function () {
-					dsg.innerHTML = '万年单身狗';
-				},
-				onEnterHg: function () {
-					dsg.innerHTML = '朋友还没有到';
-				},
-				onEnterPy: function () {
-					dsg.innerHTML = '炮友';
-				},
-				onEnterNvpy: function () {
-					dsg.innerHTML = '亲密恋人';
-				},
-				onEnterJh: function () {
-					dsg.innerHTML = '结婚';
-				}
-			}
-		});
-		sh.onclick = function () {
-			switch (ztj.state) {
-				case 'dsgg':
-					ztj.sh1(); //如果是上面的那个状态的话，就执行了上方的name:sh的代码
-					break;
-				case 'hg':
-					ztj.sh2();
-					break
-				case 'py':
-					alert('滚去表白，屌丝');
-					break;
-				case 'nvpy':
-					alert('滚去结婚吧，傻吊')
-					break;
-				case 'jh':
-					alert('好感+1')
-					break;
-			}
-			console.log(ztj.state);
-		}
-		bb.onclick = function () {
-			switch (ztj.state) {
-				case 'dsgg':
-					alert('你要先送花');
-					break;
-				case 'hg':
-					alert("连炮友都不是，还想表白");
-					break;
-				case 'py':
-					ztj.bb();
-					break;
-				case 'jh':
-					alert("已经结婚就不要秀恩爱了");
-					break;
-					// 以上状态都不存在时候执行的代码
-				default:
-					alert("尝试着送花或者求婚吧");
-			}
-			console.log(ztj.state);
-		}
-		qh.onclick = function () {
-			switch (ztj.state) {
-				case 'dsgg':
-					alert("先送花建立友情吧");
-					break
-				case 'hg':
-					alert('你要先建立关系');
-					break;
-				case 'nvpy':
-					ztj.qh();
-					break;
-				case 'py':
-					alert('去表白');
-					break;
-				default:
-					alert("不要在求婚了");
-			}
-			console.log(ztj.state);
-		}
-		fs.onclick = function () {
-			switch (ztj.state) {
-				case 'dsgg':
-					alert("(o゜▽゜)o☆单身狗不需要分手");
-					break;
-				default:
-					ztj.fs();
-			}
-		}
-	</script>
 
+	<script>
+		// this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，实际上this的最终指向的是那个调用它的对象最近的对象
+
+		// function a() {
+		// 	var user = "jj";
+		// 	console.log(this.user);
+		// 	console.log(this);
+		// }
+		// window.a();
+
+		// var o = {
+		// 	user: "jj",
+		// 	fn: function () {
+		// 		console.log(this.user)
+		// 	}
+		// }
+		// window.o.fn();
+
+		
+		// var o = {
+		// 	a:10,
+		// 	b:{
+		// 		fn:function(){
+		// 			console.log(this.a)
+		// 		}
+		// 	}
+		// }
+		// window.o.b.fn();
+
+		// var o ={
+		// 	a:10,
+		// 	b:{
+		// 		a:12,
+		// 		fn:function(){
+		// 			console.log(this.a);
+		// 		}
+		// 	}
+		// }
+		// var j = o.b.fn();
+
+		// var point = {
+		// 	x: 0,
+		// 	y: 0,
+		// 	moveTo: function (x, y) {
+		// 		this.x = this.x + x;
+		// 		this.y = this.y + y;
+		// 	}
+		// };
+		// window.point.moveTo(1, 1) //this 绑定到当前对象，即 point 对象
+		// console.log(point.x);
+		// console.log(point.y)
+
+		// function makeNoSense(x) {
+		// 	this.x = x;
+		// }
+
+		// makeNoSense(5);
+		// console.log(x); // x 已经成为一个值为 5 的全局变量
+
+		// 对于内部函数， 即声明在另外一个函数体内的函数， 这种绑定到全局对象的方式会产生另外一个问题。 
+		// 我们仍然以前面提到的 point 对象为例， 这次我们希望在 moveTo 方法内定义两个函数， 分别将 x， y 坐标进行平移。 
+		// 结果可能出乎大家意料， 不仅 point 对象没有移动， 反而多出两个全局变量 x， y。
+		// var point = {
+		// 	x: 0,
+		// 	y: 0,
+		// 	moveTo: function (x, y) {
+		// 		// 内部函数
+		// 		var that = this;
+		// 		var moveX = function (x) {
+		// 			that.x = x; //this 绑定到了哪里？
+		// 		};
+		// 		// 内部函数
+		// 		var moveY = function (y) {
+		// 			that.y = y; //this 绑定到了哪里？
+		// 		};
+		// 		moveX(x);
+		// 		moveY(y);
+		// 	}
+		// };
+		// point.moveTo(1, 1);
+		// console.log(point.x); 
+		// console.log(point.y);
+
+		// console.log(x);
+		// console.log(y);
+
+		// var f = function () {
+		// 	console.log(this.x);
+		// }
+		// var x = 1;
+		// var obj = {
+		// 	f: f,
+		// 	x: 2,
+		// };
+
+		// // 单独执行
+		// window.f() // 1
+		// // obj 环境执行
+		// window.obj.f() // 2
+
+		"use strict";
+		function test(){
+			console.log(this);
+		}
+		test();
+	</script>
 </body>
 
 </html>

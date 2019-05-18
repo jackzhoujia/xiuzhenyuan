@@ -1,0 +1,51 @@
+ <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style>
+        .activated {
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div @click="handleDivClick" :class={activated:isActivated}>Hello world</div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            components: {
+
+            },
+            data: {
+                isActivated: false
+            },
+            methods: {
+                handleDivClick: function () {
+                    this.isActivated = !this.isActivated
+                }
+            },
+            computed: {
+                fullNmae: {
+                    get: function () {
+                        return this.firstName + " " + this.lastName
+                    },
+                    set: function (value) {
+                        var arr = value.split(" ")
+                        this.firstName = arr[0]
+                        this.lastName = arr[1]
+                    }
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>
